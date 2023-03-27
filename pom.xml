@@ -11,7 +11,7 @@
     <groupId>com.bindord.eureka</groupId>
     <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-gateway</name>
+    <name>jaipro-gateway</name>
     <description>Eureka GW project for Spring Boot</description>
 
     <properties>

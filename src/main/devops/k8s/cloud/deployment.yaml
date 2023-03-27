@@ -24,7 +24,7 @@ spec:
       serviceAccountName: jaipro-sa
       containers:
         - name: jaipro-gateway
-          image: gcr.io/ancient-lattice-373518/eureka-gateway
+          image: gcr.io/ancient-lattice-373518/jaipro-gateway
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

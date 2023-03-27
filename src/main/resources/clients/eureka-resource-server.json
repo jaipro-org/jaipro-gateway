@@ -22,16 +22,6 @@
         ],
         "operationId": "findAll",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -39,12 +29,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -90,16 +90,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -107,12 +97,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -155,16 +155,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -172,12 +162,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -212,16 +212,6 @@
         ],
         "operationId": "findAll_1",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -229,12 +219,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -280,16 +280,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -297,12 +287,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -345,16 +345,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -362,12 +352,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -412,16 +412,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -429,12 +419,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -469,16 +469,6 @@
         ],
         "operationId": "findAll_2",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -486,12 +476,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -537,16 +537,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -554,12 +544,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -602,16 +602,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -619,12 +609,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -652,6 +652,76 @@
         }
       }
     },
+    "/eureka/resource-server/v1/specialist-cv/gallery": {
+      "put": {
+        "tags": [
+          "specialist-cv-controller"
+        ],
+        "operationId": "updateGallery",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpecialistGalleryUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update gallery to specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Photo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/specialist-cv/experience": {
       "put": {
         "tags": [
@@ -669,16 +739,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -686,12 +746,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -726,16 +796,6 @@
         ],
         "operationId": "findAll_3",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -743,12 +803,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -794,16 +864,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -811,12 +871,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -859,16 +929,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -876,12 +936,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -926,16 +996,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -943,12 +1003,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -991,16 +1061,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1008,12 +1068,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1048,16 +1118,6 @@
         ],
         "operationId": "findAll_5",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1065,12 +1125,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1116,16 +1186,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1133,12 +1193,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1181,16 +1251,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1198,12 +1258,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1238,16 +1308,6 @@
         ],
         "operationId": "findAll_6",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1255,12 +1315,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1306,16 +1376,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1323,12 +1383,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1371,16 +1441,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1388,12 +1448,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1428,16 +1498,6 @@
         ],
         "operationId": "findAll_7",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1445,12 +1505,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1496,16 +1566,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1513,12 +1573,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1561,16 +1631,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1578,12 +1638,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1611,13 +1681,40 @@
         }
       }
     },
-    "/eureka/resource-server/v1/customer": {
-      "get": {
+    "/eureka/resource-server/v1/customer/updatePassword": {
+      "put": {
         "tags": [
           "customer-controller"
         ],
-        "operationId": "findAll_8",
+        "operationId": "updatePassword",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerPasswordUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
           "409": {
             "description": "Conflict",
             "content": {
@@ -1628,6 +1725,46 @@
               }
             }
           },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer password",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/customer/updateLocation": {
+      "put": {
+        "tags": [
+          "customer-controller"
+        ],
+        "operationId": "updateLocation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerLocationUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1635,12 +1772,146 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer location",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/customer/updateAbout": {
+      "put": {
+        "tags": [
+          "customer-controller"
+        ],
+        "operationId": "updateAbout",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerInformationUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer about",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/customer": {
+      "get": {
+        "tags": [
+          "customer-controller"
+        ],
+        "operationId": "findAll_8",
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1686,16 +1957,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1703,12 +1964,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1751,16 +2022,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1768,12 +2029,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1808,16 +2079,6 @@
         ],
         "operationId": "findAll_9",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1825,12 +2086,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1876,16 +2147,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1893,12 +2154,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -1941,16 +2212,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1958,12 +2219,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2011,16 +2282,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2028,12 +2289,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2084,16 +2355,6 @@
           "required": true
         },
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2101,12 +2362,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2155,16 +2426,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2172,12 +2433,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2226,16 +2497,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2243,12 +2504,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2283,16 +2554,6 @@
         ],
         "operationId": "letsDoThis",
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2300,12 +2561,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2354,16 +2625,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2371,12 +2632,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2421,16 +2692,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2438,12 +2699,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2489,16 +2760,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2506,12 +2767,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2560,16 +2831,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2577,12 +2838,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2628,16 +2899,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2645,12 +2906,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2696,16 +2967,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2713,12 +2974,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -2767,16 +3038,6 @@
           }
         ],
         "responses": {
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2784,12 +3045,22 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -3034,6 +3305,59 @@
           }
         }
       },
+      "SpecialistGalleryUpdateDto": {
+        "type": "object",
+        "properties": {
+          "specialistCvId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "filesRemove": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      },
+      "Photo": {
+        "required": [
+          "size",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 50,
+            "minLength": 3,
+            "type": "string",
+            "description": "Optional description of the photo"
+          },
+          "size": {
+            "maximum": 4194304,
+            "minimum": 5080,
+            "type": "integer",
+            "description": "Image size expressed in bytes",
+            "format": "int32"
+          },
+          "url": {
+            "maxLength": 200,
+            "minLength": 36,
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "SpecialistExperienceUpdateDto": {
         "required": [
           "index",
@@ -3081,37 +3405,6 @@
             "type": "integer",
             "description": "Experience time in a profession expressed in months",
             "format": "int32"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "Photo": {
-        "required": [
-          "size",
-          "url"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "maxLength": 50,
-            "minLength": 3,
-            "type": "string",
-            "description": "Optional description of the photo"
-          },
-          "size": {
-            "maximum": 4194304,
-            "minimum": 5080,
-            "type": "integer",
-            "description": "Image size expressed in bytes",
-            "format": "int32"
-          },
-          "url": {
-            "maxLength": 200,
-            "minLength": 36,
-            "type": "string"
           },
           "date": {
             "type": "string",
@@ -3561,7 +3854,54 @@
           }
         }
       },
-      "CustomerUpdateDto": {
+      "CustomerPasswordUpdateDto": {
+        "required": [
+          "id",
+          "newPassword",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "password": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          }
+        }
+      },
+      "CustomerLocationUpdateDto": {
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "address": {
+            "maxLength": 127,
+            "minLength": 2,
+            "type": "string"
+          },
+          "districtId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32",
+            "example": 1
+          }
+        }
+      },
+      "CustomerInformationUpdateDto": {
+        "required": [
+          "email",
+          "id"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -3578,9 +3918,9 @@
             "minLength": 2,
             "type": "string"
           },
-          "address": {
-            "maxLength": 127,
-            "minLength": 2,
+          "email": {
+            "maxLength": 60,
+            "minLength": 7,
             "type": "string"
           },
           "phone": {
@@ -3590,12 +3930,6 @@
           },
           "profilePhoto": {
             "$ref": "#/components/schemas/Photo"
-          },
-          "districtId": {
-            "maximum": 32767,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
           }
         }
       },
@@ -3680,6 +4014,44 @@
             "type": "boolean"
           },
           "districtId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "CustomerUpdateDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "maxLength": 36,
+            "minLength": 2,
+            "type": "string"
+          },
+          "lastName": {
+            "maxLength": 36,
+            "minLength": 2,
+            "type": "string"
+          },
+          "address": {
+            "maxLength": 127,
+            "minLength": 2,
+            "type": "string"
+          },
+          "phone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
+          "profilePhoto": {
+            "$ref": "#/components/schemas/Photo"
+          },
+          "districtId": {
+            "maximum": 32767,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           }
