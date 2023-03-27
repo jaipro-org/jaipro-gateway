@@ -1,15 +1,20 @@
 package com.bindord.eureka.gateway.services.impl;
 
 import com.bindord.eureka.gateway.advice.CustomValidationException;
+import com.bindord.eureka.gateway.domain.specialist.SpecialistFullDto;
 import com.bindord.eureka.gateway.services.SpecialistService;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
-import com.bindord.eureka.resourceserver.model.*;
+import com.bindord.eureka.resourceserver.model.Specialist;
+import com.bindord.eureka.resourceserver.model.SpecialistCv;
+import com.bindord.eureka.resourceserver.model.SpecialistCvDto;
+import com.bindord.eureka.resourceserver.model.SpecialistUpdateDto;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
+
 import java.util.UUID;
 
 @Service
@@ -21,26 +26,35 @@ public class SpecialistServiceImpl implements SpecialistService {
     @Override
     public Mono<Specialist> update(com.bindord.eureka.auth.model.SpecialistPersist specialist) {
         return this.doValidateIfSpecialistExits(specialist.getId()).flatMap(exist -> {
-                    if(!exist){
+                    if (!exist) {
                         return Mono.error(new CustomValidationException("Specialist not found"));
                     }
                     return Mono.empty();
                 })
                 .then(
-                    Mono.zip(doUpdateSpecialist(specialist), doUpdateSpecialistCv(specialist))
-                            .flatMap(t -> Mono.just(t.getT1()))
+                        Mono.zip(doUpdateSpecialist(specialist), doUpdateSpecialistCv(specialist))
+                                .flatMap(t -> Mono.just(t.getT1()))
+                );
+    }
+
+    @Override
+    public Mono<SpecialistFullDto> findSpecialistFullInfoById(UUID id) {
+        var speId = id.toString();
+        return Mono.zip(findSpecialistById(speId), findSpecialisCvtById(speId))
+                .map(
+                        tuple -> new SpecialistFullDto(tuple.getT1(), tuple.getT2())
                 );
     }
 
     @SneakyThrows
-    private Mono<Boolean> doValidateIfSpecialistExits(UUID id){
-        if(id == null){
+    private Mono<Boolean> doValidateIfSpecialistExits(UUID id) {
+        if (id == null) {
             return Mono.just(false);
         }
 
         return resourceServerClientConfiguration.init()
                 .get()
-                .uri(uriBuilder ->  uriBuilder.path("/specialist/{id}")
+                .uri(uriBuilder -> uriBuilder.path("/specialist/{id}")
                         .build(id))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
@@ -48,7 +62,7 @@ public class SpecialistServiceImpl implements SpecialistService {
     }
 
     @SneakyThrows
-    private Mono<Specialist> doUpdateSpecialist(com.bindord.eureka.auth.model.SpecialistPersist specialist){
+    private Mono<Specialist> doUpdateSpecialist(com.bindord.eureka.auth.model.SpecialistPersist specialist) {
         var specialistDto = convertSpecialistToDTO(specialist);
 
         return resourceServerClientConfiguration.init()
@@ -62,7 +76,7 @@ public class SpecialistServiceImpl implements SpecialistService {
     }
 
     @SneakyThrows
-    private Mono<SpecialistCv> doUpdateSpecialistCv(com.bindord.eureka.auth.model.SpecialistPersist specialist){
+    private Mono<SpecialistCv> doUpdateSpecialistCv(com.bindord.eureka.auth.model.SpecialistPersist specialist) {
         var specialistCVDto = convertSpecialistCVToDTO(specialist);
 
         return resourceServerClientConfiguration.init()
@@ -76,17 +90,37 @@ public class SpecialistServiceImpl implements SpecialistService {
 
     }
 
-    private Mono<SpecialistUpdateDto> convertSpecialistToDTO(com.bindord.eureka.auth.model.SpecialistPersist specialist){
+    private Mono<SpecialistUpdateDto> convertSpecialistToDTO(com.bindord.eureka.auth.model.SpecialistPersist specialist) {
         SpecialistUpdateDto specialistDto = new SpecialistUpdateDto();
         BeanUtils.copyProperties(specialist, specialistDto);
 
         return Mono.just(specialistDto);
     }
 
-    private Mono<SpecialistCvDto> convertSpecialistCVToDTO(com.bindord.eureka.auth.model.SpecialistPersist specialist){
+    private Mono<SpecialistCvDto> convertSpecialistCVToDTO(com.bindord.eureka.auth.model.SpecialistPersist specialist) {
         SpecialistCvDto specialistCvDto = new SpecialistCvDto();
         BeanUtils.copyProperties(specialist, specialistCvDto);
 
         return Mono.just(specialistCvDto);
+    }
+
+    private Mono<Specialist> findSpecialistById(String id) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri(uriBuilder -> uriBuilder.path("/specialist/{id}")
+                        .build(id))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(Specialist.class);
+    }
+
+    private Mono<SpecialistCv> findSpecialisCvtById(String id) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}")
+                        .build(id))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(SpecialistCv.class);
     }
 }
