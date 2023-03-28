@@ -64,13 +64,13 @@ public class WorkLocationController {
 
     @ApiResponse(description = "Get all Work Locations By SpecialistId",
             responseCode = "200")
-    @GetMapping(value = "/{id}",
+    @GetMapping(value = "/{specialistId}",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Flux<WorkLocation> findAllBySpecialistId(@PathVariable UUID id) throws InterruptedException {
+    public Flux<WorkLocation> findAllBySpecialistId(@PathVariable UUID specialistId) throws InterruptedException {
         return resourceServerClientConfiguration.init()
                 .get()
-                .uri(uriBuilder ->  uriBuilder.path("/work-location/{id}")
-                        .build(id))
+                .uri(uriBuilder ->  uriBuilder.path("/work-location/{specialistId}")
+                        .build(specialistId))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(WorkLocation.class);
