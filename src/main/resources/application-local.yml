@@ -3,7 +3,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://34.71.32.155:8080/auth/realms/eureka
+          issuer-uri: http://34.70.86.164:8080/auth/realms/eureka
 
 gateway:
   services:

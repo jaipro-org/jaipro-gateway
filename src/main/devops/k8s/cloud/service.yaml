@@ -8,7 +8,7 @@ spec:
   ports:
     - targetPort: 8000
       port: 8080
-      nodePort: 31083
+      nodePort: 31084
   selector:
     service: jaipro-gateway
     type: backend
