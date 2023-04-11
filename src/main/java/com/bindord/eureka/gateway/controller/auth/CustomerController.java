@@ -2,12 +2,12 @@ package com.bindord.eureka.gateway.controller.auth;
 
 import com.bindord.eureka.auth.model.Customer;
 import com.bindord.eureka.auth.model.CustomerPersist;
+import com.bindord.eureka.auth.model.UserPasswordDTO;
 import com.bindord.eureka.gateway.wsc.AuthClientConfiguration;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.CustomerInformationDto;
 import com.bindord.eureka.resourceserver.model.CustomerInformationUpdateDto;
 import com.bindord.eureka.resourceserver.model.CustomerLocationUpdateDto;
-import com.bindord.eureka.resourceserver.model.CustomerPasswordUpdateDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -88,17 +88,15 @@ public class CustomerController {
     @ApiResponse(description = "Update a customer information",
             responseCode = "200")
     @PutMapping(value = "/updatePassword",
-            produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Boolean> updatePassword(@Valid @RequestBody CustomerPasswordUpdateDto customer) {
+    public Mono<Void> updatePassword(@Valid @RequestBody UserPasswordDTO userPassword) {
         return authClientConfiguration.init()
                 .put()
                 .uri("/customer/updatePassword")
                 .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON)
-                .body(Mono.just(customer), CustomerPasswordUpdateDto.class)
+                .body(Mono.just(userPassword), UserPasswordDTO.class)
                 .retrieve()
-                .bodyToMono(Boolean.class)
+                .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
