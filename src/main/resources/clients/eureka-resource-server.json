@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://34.172.234.168:8080",
+      "url": "http://localhost:8080",
       "description": "Generated server url"
     }
   ],
@@ -585,73 +585,6 @@
         }
       }
     },
-    "/eureka/resource-server/v1/specialist-specialization/update-experience": {
-      "put": {
-        "tags": [
-          "specialist-specialization-controller"
-        ],
-        "operationId": "updateExperience",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SpecialistSpecializationUpdateDto"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ApiError"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ErrorResponse"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Update a specialistSpecialization",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/eureka/resource-server/v1/specialist-specialization": {
       "get": {
         "tags": [
@@ -720,7 +653,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SpecialistSpecializationDto"
+                "$ref": "#/components/schemas/SpecialistSpecializationUpdateDto"
               }
             }
           },
@@ -842,6 +775,153 @@
         }
       }
     },
+    "/eureka/resource-server/v1/specialist-cv/{id}/experience": {
+      "put": {
+        "tags": [
+          "specialist-cv-controller"
+        ],
+        "operationId": "updateExperience",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpecialistExperienceUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update an experience of specialist cv"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "specialist-cv-controller"
+        ],
+        "operationId": "persistExperience",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Experience"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist an experience of specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Experience"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/specialist-cv/gallery": {
       "put": {
         "tags": [
@@ -905,73 +985,6 @@
                   "items": {
                     "$ref": "#/components/schemas/Photo"
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/eureka/resource-server/v1/specialist-cv/experience": {
-      "put": {
-        "tags": [
-          "specialist-cv-controller"
-        ],
-        "operationId": "updateExperience_1",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SpecialistExperienceUpdateDto"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ApiError"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ErrorResponse"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Update a experience specialist cv",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
                 }
               }
             }
@@ -3189,7 +3202,7 @@
         }
       }
     },
-    "/eureka/resource-server/v1/specialist-specialization/{id}": {
+    "/eureka/resource-server/v1/specialist-specialization/list/{id}": {
       "get": {
         "tags": [
           "specialist-specialization-controller"
@@ -3809,28 +3822,6 @@
           }
         }
       },
-      "SpecialistSpecializationDto": {
-        "required": [
-          "professionId",
-          "specialistId",
-          "specializationId"
-        ],
-        "type": "object",
-        "properties": {
-          "specialistId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "specializationId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
       "SpecialistSpecialization": {
         "required": [
           "professionId",
@@ -3853,6 +3844,28 @@
           "id": {
             "type": "string",
             "format": "uuid"
+          }
+        }
+      },
+      "SpecialistExperienceUpdateDto": {
+        "required": [
+          "index",
+          "professionId"
+        ],
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "time": {
+            "type": "integer",
+            "description": "Experience time in a profession expressed in months",
+            "format": "int32"
           }
         }
       },
@@ -3906,33 +3919,6 @@
           "date": {
             "type": "string",
             "format": "date-time"
-          }
-        }
-      },
-      "SpecialistExperienceUpdateDto": {
-        "required": [
-          "index",
-          "professionId",
-          "specialistCvId"
-        ],
-        "type": "object",
-        "properties": {
-          "index": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "specialistCvId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "time": {
-            "type": "integer",
-            "description": "Experience time in a profession expressed in months",
-            "format": "int32"
           }
         }
       },
@@ -4781,6 +4767,28 @@
             "maxLength": 70,
             "minLength": 2,
             "type": "string"
+          },
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "SpecialistSpecializationDto": {
+        "required": [
+          "professionId",
+          "specialistId",
+          "specializationId"
+        ],
+        "type": "object",
+        "properties": {
+          "specialistId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "specializationId": {
+            "type": "integer",
+            "format": "int32"
           },
           "professionId": {
             "type": "integer",

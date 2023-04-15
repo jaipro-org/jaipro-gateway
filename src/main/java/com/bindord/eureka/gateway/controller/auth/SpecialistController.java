@@ -4,9 +4,10 @@ import com.bindord.eureka.auth.model.SpecialistPersist;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistFullDto;
 import com.bindord.eureka.gateway.services.SpecialistService;
 import com.bindord.eureka.gateway.wsc.AuthClientConfiguration;
+import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
+import com.bindord.eureka.resourceserver.model.Experience;
 import com.bindord.eureka.resourceserver.model.Specialist;
-import com.bindord.eureka.resourceserver.model.SpecialistCv;
-import com.bindord.eureka.resourceserver.model.SpecialistCvDto;
+import com.bindord.eureka.resourceserver.model.SpecialistExperienceUpdateDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +33,7 @@ public class SpecialistController {
 
     private final AuthClientConfiguration authClientConfiguration;
     private final SpecialistService specialistService;
+    private final ResourceServerClientConfiguration resourceServerClientConfiguration;
 
     @ApiResponse(description = "Persist a specialist",
             responseCode = "200")
@@ -61,18 +63,33 @@ public class SpecialistController {
 
     @ApiResponse(description = "Update a experience in specialist CV",
             responseCode = "200")
-    @PutMapping(value = "experience",
+    @PutMapping(value = "/{id}/experience",
+            consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<Void> updateExperience(@PathVariable UUID id, @Valid @RequestBody SpecialistExperienceUpdateDto experienceUpdateDto) {
+        return resourceServerClientConfiguration.init()
+                .put()
+                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}/experience").build(id))
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just(experienceUpdateDto), SpecialistExperienceUpdateDto.class)
+                .retrieve()
+                .bodyToMono(Void.class)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @ApiResponse(description = "Persist an experience of specialist cv",
+            responseCode = "200")
+    @PostMapping(value = "/{id}/experience",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<SpecialistCv> updateExperience(@Valid @RequestBody SpecialistCvDto specialistCvDto) {
-        return authClientConfiguration.init()
-                .put()
-                .uri("/specialist-cv/update-experience")
+    public Mono<Experience> persistExperience(@PathVariable UUID id, @Valid @RequestBody Experience experience) {
+        return resourceServerClientConfiguration.init()
+                .post()
+                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}/experience").build(id))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .body(Mono.just(specialistCvDto), SpecialistCvDto.class)
+                .body(Mono.just(experience), SpecialistExperienceUpdateDto.class)
                 .retrieve()
-                .bodyToMono(SpecialistCv.class)
+                .bodyToMono(Experience.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
