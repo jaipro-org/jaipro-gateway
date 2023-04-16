@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -74,5 +75,19 @@ public class SpecialistBankAccountController {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(SpecialistBankAccount.class);
+    }
+
+    @ApiResponse(description = "Delete Specialist's bank account By Id",
+            responseCode = "200")
+    @DeleteMapping(value = "/specialist-bank-account/{id}",
+            produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<Boolean> deleteBankAccountById(@PathVariable UUID id) {
+        return resourceServerClientConfiguration.init()
+                .delete()
+                .uri(uriBuilder -> uriBuilder.path("/specialist-bank-account/{id}")
+                        .build(id))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(Boolean.class);
     }
 }
