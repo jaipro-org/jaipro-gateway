@@ -81,13 +81,13 @@ public class SpecialistBankAccountController {
             responseCode = "200")
     @DeleteMapping(value = "/specialist-bank-account/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Boolean> deleteBankAccountById(@PathVariable UUID id) {
+    public Mono<Void> deleteBankAccountById(@PathVariable UUID id) {
         return resourceServerClientConfiguration.init()
                 .delete()
                 .uri(uriBuilder -> uriBuilder.path("/specialist-bank-account/{id}")
                         .build(id))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(Boolean.class);
+                .bodyToMono(Void.class);
     }
 }
