@@ -81,13 +81,13 @@ public class WorkLocationController {
             responseCode = "200")
     @DeleteMapping(value = "/{specialistId}/{districtId}",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Boolean> deleteBySpecialistIdAndDistrictId(@PathVariable UUID specialistId, @PathVariable int districtId) throws InterruptedException {
+    public Mono<Void> deleteBySpecialistIdAndDistrictId(@PathVariable UUID specialistId, @PathVariable int districtId) throws InterruptedException {
         return resourceServerClientConfiguration.init()
                 .delete()
                 .uri(uriBuilder ->  uriBuilder.path("/work-location/{specialistId}/{districtId}")
                         .build(specialistId, districtId))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(Boolean.class);
+                .bodyToMono(Void.class);
     }
 }
