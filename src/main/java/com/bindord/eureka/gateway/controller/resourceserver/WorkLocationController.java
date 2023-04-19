@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -74,5 +75,19 @@ public class WorkLocationController {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(WorkLocation.class);
+    }
+
+    @ApiResponse(description = "delete Work Locations By SpecialistId and DistrictId",
+            responseCode = "200")
+    @DeleteMapping(value = "/{specialistId}/{districtId}",
+            produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<Void> deleteBySpecialistIdAndDistrictId(@PathVariable UUID specialistId, @PathVariable int districtId) throws InterruptedException {
+        return resourceServerClientConfiguration.init()
+                .delete()
+                .uri(uriBuilder ->  uriBuilder.path("/work-location/{specialistId}/{districtId}")
+                        .build(specialistId, districtId))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(Void.class);
     }
 }
