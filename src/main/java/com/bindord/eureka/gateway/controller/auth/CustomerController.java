@@ -57,7 +57,7 @@ public class CustomerController {
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Mono<Customer> updateInformation(@Valid @RequestBody CustomerInformationUpdateDto customer) {
-        return authClientConfiguration.init()
+        return resourceServerClientConfiguration.init()
                 .put()
                 .uri("/customer/updateAbout")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -74,7 +74,7 @@ public class CustomerController {
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Mono<Boolean> updateLocation(@Valid @RequestBody CustomerLocationUpdateDto customer) {
-        return authClientConfiguration.init()
+        return resourceServerClientConfiguration.init()
                 .put()
                 .uri("/customer/updateLocation")
                 .contentType(MediaType.APPLICATION_JSON)
