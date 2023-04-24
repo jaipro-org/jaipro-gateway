@@ -56,7 +56,7 @@ public class CustomerController {
     @PutMapping(value = "/updateInformation",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Customer> updateInformation(@Valid @RequestBody CustomerInformationUpdateDto customer) {
+    public Mono<Void> updateInformation(@Valid @RequestBody CustomerInformationUpdateDto customer) {
         return resourceServerClientConfiguration.init()
                 .put()
                 .uri("/customer/updateAbout")
@@ -64,7 +64,7 @@ public class CustomerController {
                 .accept(MediaType.APPLICATION_JSON)
                 .body(Mono.just(customer), CustomerInformationUpdateDto.class)
                 .retrieve()
-                .bodyToMono(Customer.class)
+                .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
@@ -73,7 +73,7 @@ public class CustomerController {
     @PutMapping(value = "/updateLocation",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Boolean> updateLocation(@Valid @RequestBody CustomerLocationUpdateDto customer) {
+    public Mono<Void> updateLocation(@Valid @RequestBody CustomerLocationUpdateDto customer) {
         return resourceServerClientConfiguration.init()
                 .put()
                 .uri("/customer/updateLocation")
@@ -81,7 +81,7 @@ public class CustomerController {
                 .accept(MediaType.APPLICATION_JSON)
                 .body(Mono.just(customer), CustomerLocationUpdateDto.class)
                 .retrieve()
-                .bodyToMono(Boolean.class)
+                .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
