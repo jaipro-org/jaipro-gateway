@@ -8,6 +8,7 @@ import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.CustomerInformationDto;
 import com.bindord.eureka.resourceserver.model.CustomerInformationUpdateDto;
 import com.bindord.eureka.resourceserver.model.CustomerLocationUpdateDto;
+import com.bindord.eureka.resourceserver.model.CustomerUpdatePhotoDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -82,6 +83,23 @@ public class CustomerController {
                 .body(Mono.just(customer), CustomerLocationUpdateDto.class)
                 .retrieve()
                 .bodyToMono(Void.class)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @ApiResponse(description = "Update a customer photo",
+            responseCode = "200")
+    @PutMapping(value = "/updatePhoto",
+            produces = {MediaType.APPLICATION_JSON_VALUE},
+            consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<String> updatePhoto(@Valid @RequestBody CustomerUpdatePhotoDto customer){
+        return resourceServerClientConfiguration.init()
+                .put()
+                .uri("/customer/updatePhoto")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .body(Mono.just(customer), CustomerUpdatePhotoDto.class)
+                .retrieve()
+                .bodyToMono(String.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
