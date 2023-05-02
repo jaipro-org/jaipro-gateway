@@ -3,6 +3,7 @@ package com.bindord.eureka.gateway.advice;
 import com.bindord.eureka.gateway.configuration.JacksonFactory;
 import com.bindord.eureka.gateway.domain.exception.ApiError;
 import com.bindord.eureka.gateway.domain.exception.ApiSubError;
+import com.bindord.eureka.gateway.domain.exception.ErrorResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
@@ -59,6 +60,18 @@ public class ExceptionControllerAdvice {
     Mono<ApiError> handlerNotFoundValidationException(NotFoundValidationException ex) {
         log.error("method {}", "handlerNotFoundValidationException");
         return Mono.just(new ApiError(ex));
+    }
+
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler(CustomValidationException.class)
+    public @ResponseBody
+    Mono<ErrorResponse> handlerCustomValidationException(CustomValidationException ex) {
+        LOGGER.warn("method {}", "handlerCustomValidationException");
+        LOGGER.warn(ex.getMessage());
+        for (int i = 0; i < ex.getStackTrace().length; i++) {
+            LOGGER.warn(ex.getStackTrace()[i].toString());
+        }
+        return Mono.just(new ErrorResponse(ex.getMessage(), ex.getInternalCode()));
     }
 
     @ExceptionHandler(WebClientResponseException.class)
