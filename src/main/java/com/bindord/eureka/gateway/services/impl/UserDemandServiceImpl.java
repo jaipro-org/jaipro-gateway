@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import java.util.UUID;
+
 import static com.bindord.eureka.gateway.utils.Constants.ERROR_EMAIL_NOT_FOUND;
 
 @Service
@@ -63,5 +65,15 @@ public class UserDemandServiceImpl implements UserDemandService {
                                         .subscribeOn(Schedulers.boundedElastic());
                             });
                 });
+    }
+
+    @Override
+    public Mono<Void> validateUserRecoverTicket(UUID id, UUID userId) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri("/user-recover/" + id.toString() + "/user/" + userId.toString())
+                .retrieve()
+                .bodyToMono(Void.class)
+                .subscribeOn(Schedulers.boundedElastic());
     }
 }
