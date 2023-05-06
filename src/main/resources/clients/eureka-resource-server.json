@@ -205,12 +205,202 @@
         }
       }
     },
+    "/eureka/resource-server/v1/user-recover": {
+      "get": {
+        "tags": [
+          "user-recover-controller"
+        ],
+        "operationId": "findAll_1",
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List userRecovers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRecover"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "user-recover-controller"
+        ],
+        "operationId": "update_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRecoverUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "user-recover-controller"
+        ],
+        "operationId": "save_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRecoverDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/user-info": {
       "get": {
         "tags": [
           "user-info-controller"
         ],
-        "operationId": "findAll_1",
+        "operationId": "findAll_2",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -268,7 +458,7 @@
         "tags": [
           "user-info-controller"
         ],
-        "operationId": "update_1",
+        "operationId": "update_2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -333,7 +523,7 @@
         "tags": [
           "user-info-controller"
         ],
-        "operationId": "save_1",
+        "operationId": "save_2",
         "requestBody": {
           "content": {
             "application/json": {
@@ -400,7 +590,7 @@
         "tags": [
           "specialization-controller"
         ],
-        "operationId": "findAll_2",
+        "operationId": "findAll_3",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -458,7 +648,7 @@
         "tags": [
           "specialization-controller"
         ],
-        "operationId": "update_2",
+        "operationId": "update_3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -523,7 +713,7 @@
         "tags": [
           "specialization-controller"
         ],
-        "operationId": "save_2",
+        "operationId": "save_3",
         "requestBody": {
           "content": {
             "application/json": {
@@ -590,7 +780,7 @@
         "tags": [
           "specialist-specialization-controller"
         ],
-        "operationId": "findAll_3",
+        "operationId": "findAll_4",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -648,7 +838,7 @@
         "tags": [
           "specialist-specialization-controller"
         ],
-        "operationId": "update_3",
+        "operationId": "update_4",
         "requestBody": {
           "content": {
             "application/json": {
@@ -713,7 +903,7 @@
         "tags": [
           "specialist-specialization-controller"
         ],
-        "operationId": "save_3",
+        "operationId": "save_4",
         "requestBody": {
           "content": {
             "application/json": {
@@ -997,7 +1187,7 @@
         "tags": [
           "specialist-cv-controller"
         ],
-        "operationId": "findAll_4",
+        "operationId": "findAll_5",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -1055,7 +1245,7 @@
         "tags": [
           "specialist-cv-controller"
         ],
-        "operationId": "update_4",
+        "operationId": "update_5",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1120,7 +1310,7 @@
         "tags": [
           "specialist-cv-controller"
         ],
-        "operationId": "save_4",
+        "operationId": "save_5",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1187,7 +1377,7 @@
         "tags": [
           "specialist-bank-account-controller"
         ],
-        "operationId": "update_5",
+        "operationId": "update_6",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1252,7 +1442,7 @@
         "tags": [
           "specialist-bank-account-controller"
         ],
-        "operationId": "save_5",
+        "operationId": "save_6",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1319,7 +1509,7 @@
         "tags": [
           "specialist-controller"
         ],
-        "operationId": "findAll_6",
+        "operationId": "findAll_7",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -1377,7 +1567,7 @@
         "tags": [
           "specialist-controller"
         ],
-        "operationId": "update_6",
+        "operationId": "update_7",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1442,7 +1632,7 @@
         "tags": [
           "specialist-controller"
         ],
-        "operationId": "save_6",
+        "operationId": "save_7",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1509,7 +1699,7 @@
         "tags": [
           "profession-controller"
         ],
-        "operationId": "findAll_7",
+        "operationId": "findAll_8",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -1567,7 +1757,7 @@
         "tags": [
           "profession-controller"
         ],
-        "operationId": "update_7",
+        "operationId": "update_8",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1632,7 +1822,7 @@
         "tags": [
           "profession-controller"
         ],
-        "operationId": "save_7",
+        "operationId": "save_8",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1694,12 +1884,202 @@
         }
       }
     },
+    "/eureka/resource-server/v1/mail": {
+      "get": {
+        "tags": [
+          "mail-controller"
+        ],
+        "operationId": "findAll_9",
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List mails",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mail"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "mail-controller"
+        ],
+        "operationId": "update_9",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MailUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "mail-controller"
+        ],
+        "operationId": "save_9",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MailDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/district": {
       "get": {
         "tags": [
           "district-controller"
         ],
-        "operationId": "findAll_8",
+        "operationId": "findAll_10",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -1757,7 +2137,7 @@
         "tags": [
           "district-controller"
         ],
-        "operationId": "update_8",
+        "operationId": "update_10",
         "requestBody": {
           "content": {
             "application/json": {
@@ -1822,7 +2202,7 @@
         "tags": [
           "district-controller"
         ],
-        "operationId": "save_8",
+        "operationId": "save_10",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2006,14 +2386,7 @@
             }
           },
           "200": {
-            "description": "Update a customer password",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
+            "description": "Update a customer password"
           }
         }
       }
@@ -2073,14 +2446,7 @@
             }
           },
           "200": {
-            "description": "Update a customer location",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
+            "description": "Update a customer location"
           }
         }
       }
@@ -2157,7 +2523,7 @@
         "tags": [
           "customer-controller"
         ],
-        "operationId": "findAll_9",
+        "operationId": "findAll_11",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -2215,7 +2581,7 @@
         "tags": [
           "customer-controller"
         ],
-        "operationId": "update_9",
+        "operationId": "update_11",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2280,7 +2646,7 @@
         "tags": [
           "customer-controller"
         ],
-        "operationId": "save_9",
+        "operationId": "save_11",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2347,7 +2713,7 @@
         "tags": [
           "country-controller"
         ],
-        "operationId": "findAll_10",
+        "operationId": "findAll_12",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -2405,7 +2771,7 @@
         "tags": [
           "country-controller"
         ],
-        "operationId": "update_10",
+        "operationId": "update_12",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2470,7 +2836,7 @@
         "tags": [
           "country-controller"
         ],
-        "operationId": "save_10",
+        "operationId": "save_12",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2537,7 +2903,7 @@
         "tags": [
           "bank-controller"
         ],
-        "operationId": "findAll_11",
+        "operationId": "findAll_13",
         "responses": {
           "400": {
             "description": "Bad Request",
@@ -2595,7 +2961,7 @@
         "tags": [
           "bank-controller"
         ],
-        "operationId": "update_11",
+        "operationId": "update_13",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2660,7 +3026,7 @@
         "tags": [
           "bank-controller"
         ],
-        "operationId": "save_11",
+        "operationId": "save_13",
         "requestBody": {
           "content": {
             "application/json": {
@@ -2868,6 +3234,66 @@
         }
       }
     },
+    "/eureka/resource-server/v1/mail/send/init-recover-password": {
+      "post": {
+        "tags": [
+          "mail-controller"
+        ],
+        "operationId": "initRecoverPassword",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecoverPasswordDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Send email to init recover password process"
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/work-location/{id}": {
       "get": {
         "tags": [
@@ -2996,6 +3422,73 @@
           },
           "200": {
             "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/user-info/query": {
+      "get": {
+        "tags": [
+          "user-info-controller"
+        ],
+        "operationId": "findByEmail",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by email",
             "content": {
               "application/json": {
                 "schema": {
@@ -3473,7 +3966,7 @@
         "tags": [
           "specialist-bank-account-controller"
         ],
-        "operationId": "findAll_5",
+        "operationId": "findAll_6",
         "parameters": [
           {
             "name": "specialistId",
@@ -3843,6 +4336,61 @@
           }
         }
       },
+      "UserRecoverUpdateDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "flagRecover": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UserRecover": {
+        "type": "object",
+        "properties": {
+          "createdBy": {
+            "type": "string"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "verificationCode": {
+            "maxLength": 127,
+            "minLength": 0,
+            "type": "string"
+          },
+          "flagRecover": {
+            "type": "boolean"
+          },
+          "limitDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "UserInfoUpdateDto": {
         "type": "object",
         "properties": {
@@ -3854,6 +4402,7 @@
       },
       "UserInfo": {
         "required": [
+          "email",
           "profileName",
           "profileType"
         ],
@@ -3886,6 +4435,11 @@
           "profileName": {
             "maxLength": 36,
             "minLength": 2,
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 60,
+            "minLength": 7,
             "type": "string"
           }
         }
@@ -4446,6 +5000,72 @@
           }
         }
       },
+      "MailInput": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "MailUpdateDto": {
+        "required": [
+          "body",
+          "subject"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MailInput"
+            }
+          }
+        }
+      },
+      "Mail": {
+        "required": [
+          "body",
+          "subject"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "maxLength": 2000,
+            "minLength": 0,
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inputs": {
+            "$ref": "#/components/schemas/Json"
+          }
+        }
+      },
       "DistrictUpdateDto": {
         "type": "object",
         "properties": {
@@ -4858,8 +5478,34 @@
           }
         }
       },
+      "UserRecoverDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "verificationCode": {
+            "maxLength": 127,
+            "minLength": 0,
+            "type": "string"
+          },
+          "flagRecover": {
+            "type": "boolean"
+          },
+          "limitDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "UserInfoDto": {
         "required": [
+          "email",
           "profileName",
           "profileType"
         ],
@@ -4878,6 +5524,11 @@
           "profileName": {
             "maxLength": 36,
             "minLength": 2,
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 60,
+            "minLength": 7,
             "type": "string"
           }
         }
@@ -5043,6 +5694,62 @@
             "maxLength": 50,
             "minLength": 2,
             "type": "string"
+          }
+        }
+      },
+      "RecoverPasswordDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "verificationCode": {
+            "maxLength": 127,
+            "minLength": 0,
+            "type": "string"
+          },
+          "flagRecover": {
+            "type": "boolean"
+          },
+          "limitDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emailReceiver": {
+            "type": "string"
+          }
+        }
+      },
+      "MailDto": {
+        "required": [
+          "body",
+          "subject"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MailInput"
+            }
           }
         }
       },
