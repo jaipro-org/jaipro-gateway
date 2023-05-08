@@ -12,14 +12,20 @@ import com.bindord.eureka.resourceserver.model.CustomerUpdatePhotoDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.client.MultipartBodyBuilder;
+import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.BodyInserter;
+import org.springframework.web.reactive.function.BodyInserters;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
@@ -88,18 +94,22 @@ public class CustomerController {
 
     @ApiResponse(description = "Update a customer photo",
             responseCode = "200")
-    @PutMapping(value = "/updatePhoto",
-            produces = {MediaType.APPLICATION_JSON_VALUE},
-            consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<String> updatePhoto(@Valid @RequestBody CustomerUpdatePhotoDto customer){
-        return resourceServerClientConfiguration.init()
-                .put()
+    @PostMapping(value = "/updatePhoto",
+            consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public Mono<Void> updatePhoto(@RequestPart("file") FilePart file, @RequestPart("id") String id){
+        MultipartBodyBuilder builder = new MultipartBodyBuilder();
+        builder.part("file", file);
+        builder.part("id", id);
+
+        return resourceServerClientConfiguration
+                .initFormData()
+                .post()
                 .uri("/customer/updatePhoto")
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON)
-                .body(Mono.just(customer), CustomerUpdatePhotoDto.class)
+                /*.contentType(MediaType.APPLICATION_FORM_URLENCODED)*/
+                /*.accept(MediaType.APPLICATION_JSON)*/
+                .body(BodyInserters.fromMultipartData(builder.build()))
                 .retrieve()
-                .bodyToMono(String.class)
+                .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
