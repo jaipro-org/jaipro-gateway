@@ -35,7 +35,7 @@ public class ResourceServerClientConfiguration extends BaseClientConfiguration {
         return webClientBuilder
                 .baseUrl(config.getUrl())
                 .clientConnector(connector)
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_ATOM_XML_VALUE)
+                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.MULTIPART_FORM_DATA_VALUE)
                 .build();
     }
 }
