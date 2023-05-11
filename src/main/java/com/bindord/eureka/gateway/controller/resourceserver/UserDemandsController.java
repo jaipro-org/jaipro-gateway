@@ -51,6 +51,6 @@ public class UserDemandsController {
         if (!validNwPass) {
             return Mono.error(new CustomValidationException("Passwords no coinciden, validar nuevamente."));
         }
-        return Mono.empty();
+        return userDemandService.executeUpdateUserPassword(userRecoverDto);
     }
 }

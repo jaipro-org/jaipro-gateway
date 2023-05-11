@@ -50,7 +50,8 @@ public class ExceptionControllerAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(IllegalArgumentException.class)
     public Mono<ApiError> handleBindException(IllegalArgumentException ex) {
-        log.error("method {}", "handlerNotFoundValidationException(IllegalArgumentException)");
+        log.error("method {}", "handleBindException(IllegalArgumentException)");
+        ex.printStackTrace();
         return Mono.just(new ApiError(ex.getMessage(), ex));
     }
 
