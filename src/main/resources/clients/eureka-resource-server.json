@@ -1120,13 +1120,28 @@
         "operationId": "updateGallery",
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/SpecialistGalleryUpdateDto"
+                "required": [
+                  "files",
+                  "specialistGallery"
+                ],
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "specialistGallery": {
+                    "$ref": "#/components/schemas/SpecialistGalleryUpdateDto"
+                  }
+                }
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "400": {
@@ -1171,10 +1186,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Photo"
-                  }
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -2264,73 +2276,6 @@
         }
       }
     },
-    "/eureka/resource-server/v1/customer/updatePhoto": {
-      "put": {
-        "tags": [
-          "customer-controller"
-        ],
-        "operationId": "updatePhoto",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CustomerUpdatePhotoDto"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ApiError"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ErrorResponse"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Update a customer photo",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/eureka/resource-server/v1/customer/updatePassword": {
       "put": {
         "tags": [
@@ -3294,6 +3239,224 @@
         }
       }
     },
+    "/eureka/resource-server/v1/experimental/upload": {
+      "post": {
+        "tags": [
+          "file-upload-experimental-controller"
+        ],
+        "operationId": "retrieveFileName",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "custom",
+                  "filePart"
+                ],
+                "type": "object",
+                "properties": {
+                  "filePart": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "custom": {
+                    "$ref": "#/components/schemas/CustomDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/experimental/simple": {
+      "post": {
+        "tags": [
+          "file-upload-experimental-controller"
+        ],
+        "operationId": "processPost",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/customer/updatePhoto": {
+      "post": {
+        "tags": [
+          "customer-controller"
+        ],
+        "operationId": "updatePhoto",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "file",
+                  "id"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer photo"
+          }
+        }
+      }
+    },
     "/eureka/resource-server/v1/work-location/{id}": {
       "get": {
         "tags": [
@@ -3361,6 +3524,76 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/user-recover/{id}/user/{userId}": {
+      "get": {
+        "tags": [
+          "user-recover-controller"
+        ],
+        "operationId": "validateUserRecoverTicket",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Validate limit date of ticket to recover password"
           }
         }
       }
@@ -4553,24 +4786,93 @@
         }
       },
       "SpecialistGalleryUpdateDto": {
+        "required": [
+          "specialistId"
+        ],
         "type": "object",
         "properties": {
-          "specialistCvId": {
+          "specialistId": {
             "type": "string",
             "format": "uuid"
           },
-          "filesRemove": {
+          "fileIdsToRemove": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          }
+        }
+      },
+      "Json": {
+        "type": "object"
+      },
+      "SpecialistCv": {
+        "required": [
+          "experienceTimes"
+        ],
+        "type": "object",
+        "properties": {
+          "createdBy": {
+            "type": "string"
           },
-          "files": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "binary"
-            }
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "about": {
+            "maxLength": 1300,
+            "minLength": 30,
+            "type": "string"
+          },
+          "socialNetworks": {
+            "$ref": "#/components/schemas/Json"
+          },
+          "gallery": {
+            "$ref": "#/components/schemas/Json"
+          },
+          "profilePhoto": {
+            "$ref": "#/components/schemas/Json"
+          },
+          "experienceTimes": {
+            "$ref": "#/components/schemas/Json"
+          }
+        }
+      },
+      "Experience": {
+        "required": [
+          "professionId",
+          "professionName"
+        ],
+        "type": "object",
+        "properties": {
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionName": {
+            "maxLength": 50,
+            "minLength": 3,
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "description": "Experience time in a profession expressed in months",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -4598,33 +4900,6 @@
             "maxLength": 200,
             "minLength": 36,
             "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "Experience": {
-        "required": [
-          "professionId",
-          "professionName"
-        ],
-        "type": "object",
-        "properties": {
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "professionName": {
-            "maxLength": 50,
-            "minLength": 3,
-            "type": "string"
-          },
-          "time": {
-            "type": "integer",
-            "description": "Experience time in a profession expressed in months",
-            "format": "int32"
           },
           "date": {
             "type": "string",
@@ -4687,52 +4962,6 @@
             "items": {
               "$ref": "#/components/schemas/Experience"
             }
-          }
-        }
-      },
-      "Json": {
-        "type": "object"
-      },
-      "SpecialistCv": {
-        "required": [
-          "experienceTimes"
-        ],
-        "type": "object",
-        "properties": {
-          "createdBy": {
-            "type": "string"
-          },
-          "creationDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "modifiedBy": {
-            "type": "string"
-          },
-          "modifiedDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "about": {
-            "maxLength": 1300,
-            "minLength": 30,
-            "type": "string"
-          },
-          "socialNetworks": {
-            "$ref": "#/components/schemas/Json"
-          },
-          "gallery": {
-            "$ref": "#/components/schemas/Json"
-          },
-          "profilePhoto": {
-            "$ref": "#/components/schemas/Json"
-          },
-          "experienceTimes": {
-            "$ref": "#/components/schemas/Json"
           }
         }
       },
@@ -4827,12 +5056,6 @@
         }
       },
       "SpecialistUpdateDto": {
-        "required": [
-          "address",
-          "lastName",
-          "name",
-          "phone"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -4859,6 +5082,11 @@
             "minLength": 9,
             "type": "string"
           },
+          "secondaryPhone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
           "districtId": {
             "type": "integer",
             "format": "int32",
@@ -4878,7 +5106,8 @@
           "lastName",
           "name",
           "phone",
-          "publicUrl"
+          "publicUrl",
+          "secondaryPhone"
         ],
         "type": "object",
         "properties": {
@@ -4937,6 +5166,11 @@
             "type": "string"
           },
           "phone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
+          "secondaryPhone": {
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
@@ -5137,19 +5371,6 @@
             "maxLength": 3,
             "minLength": 3,
             "type": "string"
-          }
-        }
-      },
-      "CustomerUpdatePhotoDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "file": {
-            "type": "string",
-            "format": "binary"
           }
         }
       },
@@ -5619,7 +5840,8 @@
           "lastName",
           "name",
           "phone",
-          "publicUrl"
+          "publicUrl",
+          "secondaryPhone"
         ],
         "type": "object",
         "properties": {
@@ -5664,6 +5886,11 @@
             "type": "string"
           },
           "phone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
+          "secondaryPhone": {
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
@@ -5750,6 +5977,24 @@
             "items": {
               "$ref": "#/components/schemas/MailInput"
             }
+          }
+        }
+      },
+      "CustomDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "imageURLs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "inputImageName": {
+            "type": "string"
           }
         }
       },

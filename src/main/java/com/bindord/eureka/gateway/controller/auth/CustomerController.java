@@ -8,11 +8,9 @@ import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.CustomerInformationDto;
 import com.bindord.eureka.resourceserver.model.CustomerInformationUpdateDto;
 import com.bindord.eureka.resourceserver.model.CustomerLocationUpdateDto;
-import com.bindord.eureka.resourceserver.model.CustomerUpdatePhotoDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.http.codec.multipart.FilePart;
@@ -24,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.reactive.function.BodyInserter;
 import org.springframework.web.reactive.function.BodyInserters;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
@@ -105,8 +102,6 @@ public class CustomerController {
                 .initFormData()
                 .post()
                 .uri("/customer/updatePhoto")
-                /*.contentType(MediaType.APPLICATION_FORM_URLENCODED)*/
-                /*.accept(MediaType.APPLICATION_JSON)*/
                 .body(BodyInserters.fromMultipartData(builder.build()))
                 .retrieve()
                 .bodyToMono(Void.class)

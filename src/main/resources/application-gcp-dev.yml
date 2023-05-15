@@ -15,7 +15,7 @@ gateway:
         connectionTimeout: 300
       resource-server:
         url: http://jaipro-resource-server.jaipro.svc.cluster.local:8080/eureka/resource-server/v1
-        readTimeout: 7000
+        readTimeout: 13000
         writeTimeout: 1000
         connectionTimeout: 300
       authentication:
