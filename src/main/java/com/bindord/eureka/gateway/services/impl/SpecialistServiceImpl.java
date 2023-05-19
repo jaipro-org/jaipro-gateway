@@ -1,21 +1,28 @@
 package com.bindord.eureka.gateway.services.impl;
 
 import com.bindord.eureka.gateway.advice.CustomValidationException;
+import com.bindord.eureka.gateway.domain.specialist.SpecialistFiltersDto;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistFullDto;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistFullUpdateDto;
 import com.bindord.eureka.gateway.services.SpecialistService;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
+import com.bindord.eureka.resourceserver.model.District;
+import com.bindord.eureka.resourceserver.model.Profession;
 import com.bindord.eureka.resourceserver.model.Specialist;
 import com.bindord.eureka.resourceserver.model.SpecialistCv;
 import com.bindord.eureka.resourceserver.model.SpecialistCvDto;
 import com.bindord.eureka.resourceserver.model.SpecialistUpdateDto;
+import com.bindord.eureka.resourceserver.model.Specialization;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -44,6 +51,21 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .map(
                         tuple -> new SpecialistFullDto(tuple.getT1(), tuple.getT2())
                 );
+    }
+
+    @Override
+    public Mono<SpecialistFiltersDto> getSpecialistFilters() {
+        return Flux
+                .zip(getAllSpecialization(), getAllDistrict(), getAllProfession())
+                .map(tuple -> {
+                    var specialistFiltersDto = new SpecialistFiltersDto();
+                    specialistFiltersDto.setCategories(tuple.getT1());
+                    specialistFiltersDto.setDistricts(tuple.getT2());
+                    specialistFiltersDto.setSpecialties(tuple.getT3());
+
+                    return specialistFiltersDto;
+                })
+                .single();
     }
 
     @SneakyThrows
@@ -122,5 +144,41 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(SpecialistCv.class);
+    }
+
+    private Flux<List<Specialization>> getAllSpecialization(){
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri("/specialization")
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(Specialization.class)
+                .subscribeOn(Schedulers.boundedElastic())
+                .collectList()
+                .flux();
+    }
+
+    private Flux<List<District>> getAllDistrict(){
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri("/district")
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(District.class)
+                .subscribeOn(Schedulers.boundedElastic())
+                .collectList()
+                .flux();
+    }
+
+    private Flux<List<Profession>> getAllProfession(){
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri("/profession")
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(Profession.class)
+                .subscribeOn(Schedulers.boundedElastic())
+                .collectList()
+                .flux();
     }
 }

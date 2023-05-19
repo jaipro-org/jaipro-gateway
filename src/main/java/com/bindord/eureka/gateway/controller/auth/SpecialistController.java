@@ -1,6 +1,7 @@
 package com.bindord.eureka.gateway.controller.auth;
 
 import com.bindord.eureka.auth.model.SpecialistPersist;
+import com.bindord.eureka.gateway.domain.specialist.SpecialistFiltersDto;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistFullDto;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistFullUpdateDto;
 import com.bindord.eureka.gateway.services.SpecialistService;
@@ -100,5 +101,13 @@ public class SpecialistController {
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public Mono<SpecialistFullDto> findSpecialistFullInfoById(@PathVariable UUID specialistId) {
         return specialistService.findSpecialistFullInfoById(specialistId);
+    }
+
+    @ApiResponse(description = "Get full filters for specialist list",
+            responseCode = "200")
+    @GetMapping(value = "/filters",
+            produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<SpecialistFiltersDto> findSpecialistFullInfoById(){
+            return specialistService.getSpecialistFilters();
     }
 }
