@@ -30,11 +30,11 @@ public class AspectController {
 
             Object[] signatureArgs = joinPoint.getArgs();
 
-            for (int i = 0; i < signatureArgs.length; i++) {
+            for (Object signatureArg : signatureArgs) {
 //                mapper.enable(SerializationFeature.INDENT_OUTPUT);
                 try {
-                    if (signatureArgs[i] != null) {
-                        LOGGER.debug(">> Inputs > " + mapper.writeValueAsString(signatureArgs[i]));
+                    if (signatureArg != null) {
+                        LOGGER.debug(">> Inputs > " + mapper.writeValueAsString(signatureArg));
                     }
 
                 } catch (JsonProcessingException e) {
