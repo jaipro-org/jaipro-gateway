@@ -22,19 +22,6 @@
         ],
         "operationId": "findAll",
         "responses": {
-          "200": {
-            "description": "List workLocations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -68,6 +55,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List workLocations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -90,16 +90,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a workLocation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WorkLocation"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -133,6 +123,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a workLocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkLocation"
                 }
               }
             }
@@ -155,16 +155,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a workLocation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WorkLocation"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -198,6 +188,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a workLocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkLocation"
                 }
               }
             }
@@ -212,19 +212,6 @@
         ],
         "operationId": "findAll_1",
         "responses": {
-          "200": {
-            "description": "List userRecovers",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserRecover"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -258,6 +245,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List userRecovers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRecover"
+                  }
                 }
               }
             }
@@ -280,16 +280,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a userRecover",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserRecover"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -323,6 +313,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
                 }
               }
             }
@@ -345,16 +345,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a userRecover",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserRecover"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -388,6 +378,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
                 }
               }
             }
@@ -402,19 +402,6 @@
         ],
         "operationId": "findAll_2",
         "responses": {
-          "200": {
-            "description": "List users info",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserInfo"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -448,6 +435,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List users info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserInfo"
+                  }
                 }
               }
             }
@@ -470,16 +470,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update an user info",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -513,6 +503,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update an user info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -535,16 +535,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist an user info",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -578,6 +568,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist an user info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -592,19 +592,6 @@
         ],
         "operationId": "findAll_3",
         "responses": {
-          "200": {
-            "description": "List specializations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Specialization"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -638,6 +625,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Specialization"
+                  }
                 }
               }
             }
@@ -660,16 +660,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialization",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Specialization"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -703,6 +693,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialization"
                 }
               }
             }
@@ -725,16 +725,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialization",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Specialization"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -768,6 +758,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialization"
                 }
               }
             }
@@ -793,16 +793,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Specialist"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -836,6 +826,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -869,16 +869,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Specialist"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -912,6 +902,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -926,19 +926,6 @@
         ],
         "operationId": "findAll_4",
         "responses": {
-          "200": {
-            "description": "List specialistSpecializations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -972,6 +959,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialistSpecializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -994,16 +994,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialistSpecialization",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistSpecialization"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1037,6 +1027,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialistSpecialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistSpecialization"
                 }
               }
             }
@@ -1059,16 +1059,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialistSpecialization",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistSpecialization"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1102,6 +1092,94 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialistSpecialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistSpecialization"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/specialist-cv/{id}/presentation": {
+      "put": {
+        "tags": [
+          "specialist-cv-controller"
+        ],
+        "operationId": "updatePresentation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpecialistCvPresentationUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist cv but only the fields related to presentation card",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1137,9 +1215,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update an experience of specialist cv"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1176,6 +1251,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update an experience of specialist cv"
           }
         }
       },
@@ -1206,16 +1284,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist an experience of specialist cv",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Experience"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1249,6 +1317,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist an experience of specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Experience"
                 }
               }
             }
@@ -1274,16 +1352,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1317,6 +1385,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1350,16 +1428,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist cv",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1393,6 +1461,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1408,28 +1486,30 @@
         "operationId": "updateGallery",
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/SpecialistGalleryUpdateDto"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Update gallery to specialist cv",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Photo"
+                "required": [
+                  "images",
+                  "specialistGallery"
+                ],
+                "type": "object",
+                "properties": {
+                  "images": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "specialistGallery": {
+                    "$ref": "#/components/schemas/SpecialistGalleryUpdateDto"
                   }
                 }
               }
             }
-          },
+          }
+        },
+        "responses": {
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1463,6 +1543,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update gallery to specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1487,16 +1577,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist bank account",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1530,6 +1610,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist bank account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -1552,16 +1642,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist bank account",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1595,6 +1675,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist bank account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -1609,19 +1699,6 @@
         ],
         "operationId": "findAll_8",
         "responses": {
-          "200": {
-            "description": "List professions",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Profession"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1655,6 +1732,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List professions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Profession"
+                  }
                 }
               }
             }
@@ -1677,16 +1767,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a profession",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Profession"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1720,6 +1800,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a profession",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profession"
                 }
               }
             }
@@ -1742,16 +1832,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a profession",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Profession"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1785,6 +1865,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a profession",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profession"
                 }
               }
             }
@@ -1799,19 +1889,6 @@
         ],
         "operationId": "findAll_9",
         "responses": {
-          "200": {
-            "description": "List mails",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Mail"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1845,6 +1922,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List mails",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mail"
+                  }
                 }
               }
             }
@@ -1867,16 +1957,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a mail",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Mail"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1910,6 +1990,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
                 }
               }
             }
@@ -1932,16 +2022,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a mail",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Mail"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -1975,6 +2055,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
                 }
               }
             }
@@ -1989,19 +2079,6 @@
         ],
         "operationId": "findAll_10",
         "responses": {
-          "200": {
-            "description": "List districts",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/District"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2035,6 +2112,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List districts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/District"
+                  }
                 }
               }
             }
@@ -2057,16 +2147,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a district",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/District"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2100,6 +2180,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a district",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/District"
                 }
               }
             }
@@ -2122,16 +2212,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a district",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/District"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2165,6 +2245,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a district",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/District"
                 }
               }
             }
@@ -2189,9 +2279,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer password"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2228,6 +2315,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer password"
           }
         }
       }
@@ -2249,9 +2339,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer location"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2288,6 +2375,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer location"
           }
         }
       }
@@ -2309,16 +2399,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer about",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Customer"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2352,6 +2432,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer about",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2366,19 +2456,6 @@
         ],
         "operationId": "findAll_11",
         "responses": {
-          "200": {
-            "description": "List customers",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Customer"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2412,6 +2489,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List customers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Customer"
+                  }
                 }
               }
             }
@@ -2434,16 +2524,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Customer"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2477,6 +2557,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2499,16 +2589,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a customer",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Customer"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2542,6 +2622,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2556,19 +2646,6 @@
         ],
         "operationId": "findAll_12",
         "responses": {
-          "200": {
-            "description": "List countrys",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Country"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2602,6 +2679,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List countrys",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
                 }
               }
             }
@@ -2624,16 +2714,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a country",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Country"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2667,6 +2747,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a country",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
                 }
               }
             }
@@ -2689,16 +2779,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a country",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Country"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2732,6 +2812,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a country",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
                 }
               }
             }
@@ -2746,19 +2836,6 @@
         ],
         "operationId": "findAll_13",
         "responses": {
-          "200": {
-            "description": "List banks",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bank"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2792,6 +2869,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List banks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bank"
+                  }
                 }
               }
             }
@@ -2814,16 +2904,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a bank",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Bank"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2857,6 +2937,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a bank",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bank"
                 }
               }
             }
@@ -2879,16 +2969,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a bank",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Bank"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2922,6 +3002,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a bank",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bank"
                 }
               }
             }
@@ -2949,19 +3039,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist many workLocations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -2995,6 +3072,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist many workLocations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -3022,19 +3112,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist many specialistSpecializations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3068,6 +3145,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist many specialistSpecializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -3082,19 +3172,6 @@
         ],
         "operationId": "findAll_5",
         "responses": {
-          "200": {
-            "description": "List specialist's cvs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistCv"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3128,6 +3205,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialist's cvs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistCv"
+                  }
                 }
               }
             }
@@ -3150,16 +3240,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist cv",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3193,6 +3273,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -3207,19 +3297,6 @@
         ],
         "operationId": "findAll_7",
         "responses": {
-          "200": {
-            "description": "List specialists",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Specialist"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3253,6 +3330,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Specialist"
+                  }
                 }
               }
             }
@@ -3275,16 +3365,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Specialist"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3318,6 +3398,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -3342,9 +3432,6 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Send email to init recover password process"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3378,6 +3465,155 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Send email to init recover password process"
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/experimental/upload": {
+      "post": {
+        "tags": [
+          "file-upload-experimental-controller"
+        ],
+        "operationId": "retrieveFileName",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "custom",
+                  "filePart"
+                ],
+                "type": "object",
+                "properties": {
+                  "filePart": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "custom": {
+                    "$ref": "#/components/schemas/CustomDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/experimental/simple": {
+      "post": {
+        "tags": [
+          "file-upload-experimental-controller"
+        ],
+        "operationId": "processPost",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
                 }
               }
             }
@@ -3418,9 +3654,6 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Update a customer photo"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3457,6 +3690,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer photo"
           }
         }
       }
@@ -3479,19 +3715,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "FindAll by SpecialistId",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3525,6 +3748,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "FindAll by SpecialistId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -3559,9 +3795,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Validate limit date of ticket to recover password"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3598,6 +3831,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Validate limit date of ticket to recover password"
           }
         }
       }
@@ -3620,16 +3856,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3663,6 +3889,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -3687,16 +3923,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by email",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3730,6 +3956,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -3744,19 +3980,6 @@
         ],
         "operationId": "letsDoThis",
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3790,6 +4013,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -3814,19 +4050,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by filters",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Specialist"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3860,6 +4083,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by filters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Specialist"
+                  }
                 }
               }
             }
@@ -3884,16 +4120,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Verify if specialist exists",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3927,6 +4153,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Verify if specialist exists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
                 }
               }
             }
@@ -3952,19 +4188,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "FindAll by SpecialistId",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3998,6 +4221,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "FindAll by SpecialistId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -4023,16 +4259,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find One by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4066,6 +4292,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find One by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -4089,9 +4325,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Delete banks account"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4128,6 +4361,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Delete banks account"
           }
         }
       }
@@ -4150,19 +4386,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find All by specialist Id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistBankAccount"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4196,6 +4419,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find All by specialist Id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistBankAccount"
+                  }
                 }
               }
             }
@@ -4221,16 +4457,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Get customer information",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomerInformationDto"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4264,6 +4490,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Get customer information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerInformationDto"
                 }
               }
             }
@@ -4289,16 +4525,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Customer"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4332,6 +4558,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -4366,9 +4602,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "delete work location by id"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -4405,6 +4638,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "delete work location by id"
           }
         }
       }
@@ -4652,15 +4888,12 @@
         }
       },
       "SpecialistUpdateDto": {
-        "required": [
-          "address",
-          "lastName",
-          "name",
-          "phone",
-          "secondaryPhone"
-        ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "name": {
             "maxLength": 36,
             "minLength": 2,
@@ -4690,6 +4923,10 @@
             "type": "integer",
             "format": "int32",
             "example": 1
+          },
+          "file": {
+            "type": "string",
+            "format": "binary"
           }
         }
       },
@@ -4704,7 +4941,8 @@
           "lastName",
           "name",
           "phone",
-          "publicUrl"
+          "publicUrl",
+          "secondaryPhone"
         ],
         "type": "object",
         "properties": {
@@ -4763,6 +5001,11 @@
             "type": "string"
           },
           "phone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
+          "secondaryPhone": {
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
@@ -4834,31 +5077,13 @@
           }
         }
       },
-      "SpecialistExperienceUpdateDto": {
-        "required": [
-          "index",
-          "professionId"
-        ],
+      "SpecialistCvPresentationUpdateDto": {
         "type": "object",
         "properties": {
-          "index": {
-            "type": "integer",
-            "format": "int32"
+          "id": {
+            "type": "string",
+            "format": "uuid"
           },
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "time": {
-            "type": "integer",
-            "description": "Experience time in a profession expressed in months",
-            "format": "int32"
-          }
-        }
-      },
-      "SpecialistCvUpdateDto": {
-        "type": "object",
-        "properties": {
           "about": {
             "maxLength": 1300,
             "minLength": 30,
@@ -4918,25 +5143,52 @@
           }
         }
       },
-      "SpecialistGalleryUpdateDto": {
+      "SpecialistExperienceUpdateDto": {
+        "required": [
+          "index",
+          "professionId"
+        ],
         "type": "object",
         "properties": {
-          "specialistCvId": {
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "time": {
+            "type": "integer",
+            "description": "Experience time in a profession expressed in months",
+            "format": "int32"
+          }
+        }
+      },
+      "Experience": {
+        "required": [
+          "professionId",
+          "professionName"
+        ],
+        "type": "object",
+        "properties": {
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionName": {
+            "maxLength": 50,
+            "minLength": 3,
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "description": "Experience time in a profession expressed in months",
+            "format": "int32"
+          },
+          "date": {
             "type": "string",
-            "format": "uuid"
-          },
-          "filesRemove": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "files": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "binary"
-            }
+            "format": "date-time"
           }
         }
       },
@@ -4968,6 +5220,91 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          }
+        }
+      },
+      "SocialNetwork": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 30,
+            "minLength": 3,
+            "type": "string"
+          },
+          "username": {
+            "type": "string",
+            "description": "Social network's username"
+          }
+        }
+      },
+      "SpecialistCvUpdateDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "about": {
+            "maxLength": 1300,
+            "minLength": 30,
+            "type": "string"
+          },
+          "socialNetworks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SocialNetwork"
+            }
+          },
+          "gallery": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Photo"
+            }
+          },
+          "profilePhoto": {
+            "$ref": "#/components/schemas/Photo"
+          },
+          "experienceTimes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Experience"
+            }
+          },
+          "filePhoto": {
+            "type": "string"
+          },
+          "filePhotoExtension": {
+            "type": "string"
+          },
+          "flagUpdatePhoto": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SpecialistGalleryUpdateDto": {
+        "required": [
+          "specialistId"
+        ],
+        "type": "object",
+        "properties": {
+          "specialistId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "fileIdsToRemove": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -5663,56 +6000,6 @@
           }
         }
       },
-      "Experience": {
-        "required": [
-          "professionId",
-          "professionName"
-        ],
-        "type": "object",
-        "properties": {
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "professionName": {
-            "maxLength": 50,
-            "minLength": 3,
-            "type": "string"
-          },
-          "time": {
-            "type": "integer",
-            "description": "Experience time in a profession expressed in months",
-            "format": "int32"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "SocialNetwork": {
-        "required": [
-          "id",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "maxLength": 30,
-            "minLength": 3,
-            "type": "string"
-          },
-          "username": {
-            "type": "string",
-            "description": "Social network's username"
-          }
-        }
-      },
       "SpecialistCvDto": {
         "required": [
           "experienceTimes"
@@ -5759,7 +6046,8 @@
           "lastName",
           "name",
           "phone",
-          "publicUrl"
+          "publicUrl",
+          "secondaryPhone"
         ],
         "type": "object",
         "properties": {
@@ -5804,6 +6092,11 @@
             "type": "string"
           },
           "phone": {
+            "maxLength": 15,
+            "minLength": 9,
+            "type": "string"
+          },
+          "secondaryPhone": {
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
@@ -5890,6 +6183,24 @@
             "items": {
               "$ref": "#/components/schemas/MailInput"
             }
+          }
+        }
+      },
+      "CustomDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "imageURLs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "inputImageName": {
+            "type": "string"
           }
         }
       },

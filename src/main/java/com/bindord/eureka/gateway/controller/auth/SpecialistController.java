@@ -42,7 +42,7 @@ public class SpecialistController {
     @PostMapping(value = "",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Specialist> persistSpecialist(@Valid @RequestBody SpecialistPersist specialist) throws InterruptedException {
+    public Mono<Specialist> persistSpecialist(@Valid @RequestBody SpecialistPersist specialist) {
         return authClientConfiguration.init()
                 .post()
                 .uri("/specialist")
@@ -59,11 +59,11 @@ public class SpecialistController {
     @PutMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Specialist> updateSpecialist(@PathVariable UUID id, @Valid @RequestBody SpecialistFullUpdateDto specialist) throws InterruptedException {
+    public Mono<Specialist> updateSpecialist(@PathVariable UUID id, @Valid @RequestBody SpecialistFullUpdateDto specialist) {
         return specialistService.update(id, specialist);
     }
 
-    @ApiResponse(description = "Update a experience in specialist CV",
+    @ApiResponse(description = "Update an experience in specialist CV",
             responseCode = "200")
     @PutMapping(value = "/{id}/experience",
             consumes = {MediaType.APPLICATION_JSON_VALUE})
