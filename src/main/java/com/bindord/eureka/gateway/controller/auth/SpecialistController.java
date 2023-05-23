@@ -91,7 +91,7 @@ public class SpecialistController {
                 .retrieve()
                 .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic())
-                .zipWith(
+                .then(
                         resourceServerClientConfiguration.init()
                                 .delete()
                                 .uri(uriBuilder -> uriBuilder.path("/specialist-specialization/{id}/profession/{professionId}")
@@ -99,7 +99,7 @@ public class SpecialistController {
                                 .retrieve()
                                 .bodyToMono(Void.class)
                                 .subscribeOn(Schedulers.boundedElastic())
-                ).then();
+                );
     }
 
     @ApiResponse(description = "Persist an experience of specialist cv",
