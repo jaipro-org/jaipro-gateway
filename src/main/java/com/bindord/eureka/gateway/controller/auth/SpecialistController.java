@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -78,6 +79,29 @@ public class SpecialistController {
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
+    @ApiResponse(description = "Delete an experience of specialist CV",
+            responseCode = "200")
+    @DeleteMapping(value = "/{id}/experience/{professionId}",
+            consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<Void> deleteExperienceByIdAndProfessionId(@PathVariable UUID id, @PathVariable Integer professionId) {
+        return resourceServerClientConfiguration.init()
+                .delete()
+                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}/experience/{professionId}")
+                        .build(id, professionId))
+                .retrieve()
+                .bodyToMono(Void.class)
+                .subscribeOn(Schedulers.boundedElastic())
+                .zipWith(
+                        resourceServerClientConfiguration.init()
+                                .delete()
+                                .uri(uriBuilder -> uriBuilder.path("/specialist-specialization/{id}/profession/{professionId}")
+                                        .build(id, professionId))
+                                .retrieve()
+                                .bodyToMono(Void.class)
+                                .subscribeOn(Schedulers.boundedElastic())
+                ).then();
+    }
+
     @ApiResponse(description = "Persist an experience of specialist cv",
             responseCode = "200")
     @PostMapping(value = "/{id}/experience",
@@ -107,7 +131,7 @@ public class SpecialistController {
             responseCode = "200")
     @GetMapping(value = "/filters",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<SpecialistFiltersDto> findSpecialistFullInfoById(){
-            return specialistService.getSpecialistFilters();
+    public Mono<SpecialistFiltersDto> findSpecialistFullInfoById() {
+        return specialistService.getSpecialistFilters();
     }
 }
