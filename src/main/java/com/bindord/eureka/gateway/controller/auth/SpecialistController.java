@@ -10,6 +10,8 @@ import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.Experience;
 import com.bindord.eureka.resourceserver.model.Specialist;
 import com.bindord.eureka.resourceserver.model.SpecialistExperienceUpdateDto;
+import com.bindord.eureka.resourceserver.model.SpecialistFiltersSearchDto;
+import com.bindord.eureka.resourceserver.model.SpecialistResultSearchDTO;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
@@ -133,5 +136,25 @@ public class SpecialistController {
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public Mono<SpecialistFiltersDto> findSpecialistFullInfoById() {
         return specialistService.getSpecialistFilters();
+    }
+
+    @ApiResponse(description = "search specialist by filters",
+            responseCode = "200")
+    @GetMapping(value = "/seach",
+            produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Flux<SpecialistResultSearchDTO> searchSpecialist(@Valid SpecialistFiltersSearchDto specialistFiltersSearchDto) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri(uriBuilder -> uriBuilder.path("/specialist/search")
+                        .queryParam("categories", specialistFiltersSearchDto.getCategories())
+                        .queryParam("specialties", specialistFiltersSearchDto.getSpecialties())
+                        .queryParam("districts", specialistFiltersSearchDto.getDistricts())
+                        .queryParam("page", specialistFiltersSearchDto.getPage())
+                        .queryParam("pageSize", specialistFiltersSearchDto.getPageSize())
+                        .build())
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(SpecialistResultSearchDTO.class)
+                .subscribeOn(Schedulers.boundedElastic());
     }
 }
