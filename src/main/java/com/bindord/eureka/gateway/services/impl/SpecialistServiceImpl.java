@@ -32,16 +32,20 @@ public class SpecialistServiceImpl implements SpecialistService {
     private final ResourceServerClientConfiguration resourceServerClientConfiguration;
 
     @Override
-    public Mono<Specialist> update(UUID id, SpecialistFullUpdateDto specialist) {
+    public Mono<SpecialistFullDto> update(UUID id, SpecialistFullUpdateDto specialist) {
         return this
                 .doValidateIfSpecialistExits(id)
                 .flatMap(exist -> exist ?
-                                    Mono.empty() :
-                                    Mono.error(new CustomValidationException("Specialist not found")))
+                        Mono.empty() :
+                        Mono.error(new CustomValidationException("Specialist not found")))
                 .then(
                         Mono.zip(doUpdateSpecialist(id, specialist), doUpdateSpecialistCvOnlyPresentation(id, specialist))
-                                .flatMap(t -> Mono.just(t.getT1()))
+                                .flatMap(t -> buildSpecialistResponse(t.getT1(), t.getT2()))
                 );
+    }
+
+    private Mono<SpecialistFullDto> buildSpecialistResponse(Specialist specialist, SpecialistCv specialistCv) {
+        return Mono.just(new SpecialistFullDto(specialist, specialistCv));
     }
 
     @Override
@@ -80,7 +84,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                         .build(id))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(Specialist.class).flatMap(spe->Mono.just(true));
+                .bodyToMono(Specialist.class).flatMap(spe -> Mono.just(true));
     }
 
     @SneakyThrows
@@ -145,7 +149,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .bodyToMono(SpecialistCv.class);
     }
 
-    private Flux<List<Specialization>> getAllSpecialization(){
+    private Flux<List<Specialization>> getAllSpecialization() {
         return resourceServerClientConfiguration.init()
                 .get()
                 .uri("/specialization")
@@ -157,7 +161,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .flux();
     }
 
-    private Flux<List<District>> getAllDistrict(){
+    private Flux<List<District>> getAllDistrict() {
         return resourceServerClientConfiguration.init()
                 .get()
                 .uri("/district")
@@ -169,7 +173,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .flux();
     }
 
-    private Flux<List<Profession>> getAllProfession(){
+    private Flux<List<Profession>> getAllProfession() {
         return resourceServerClientConfiguration.init()
                 .get()
                 .uri("/profession")

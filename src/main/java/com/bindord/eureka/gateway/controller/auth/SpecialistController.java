@@ -58,12 +58,12 @@ public class SpecialistController {
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
-    @ApiResponse(description = "Update a specialist",
+    @ApiResponse(description = "Update a specialist and presentation fields",
             responseCode = "200")
     @PutMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Mono<Specialist> updateSpecialist(@PathVariable UUID id, @Valid @RequestBody SpecialistFullUpdateDto specialist) {
+    public Mono<SpecialistFullDto> updateSpecialist(@PathVariable UUID id, @Valid @RequestBody SpecialistFullUpdateDto specialist) {
         return specialistService.update(id, specialist);
     }
 
@@ -139,7 +139,7 @@ public class SpecialistController {
 
     @ApiResponse(description = "search specialist by filters",
             responseCode = "200")
-    @GetMapping(value = "/seach",
+    @GetMapping(value = "/search",
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public Flux<SpecialistResultSearchDTO> searchSpecialist(@Valid SpecialistFiltersSearchDto specialistFiltersSearchDto) {
         return resourceServerClientConfiguration.init()

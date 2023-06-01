@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public interface SpecialistService {
 
-    Mono<Specialist> update(UUID id, SpecialistFullUpdateDto specialist);
+    Mono<SpecialistFullDto> update(UUID id, SpecialistFullUpdateDto specialist);
 
     Mono<SpecialistFullDto> findSpecialistFullInfoById(UUID uuid);
 
