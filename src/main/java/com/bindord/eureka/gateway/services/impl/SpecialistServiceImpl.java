@@ -39,7 +39,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                                     Mono.empty() :
                                     Mono.error(new CustomValidationException("Specialist not found")))
                 .then(
-                        Mono.zip(doUpdateSpecialist(id, specialist), doUpdateSpecialistCv(id, specialist))
+                        Mono.zip(doUpdateSpecialist(id, specialist), doUpdateSpecialistCvOnlyPresentation(id, specialist))
                                 .flatMap(t -> Mono.just(t.getT1()))
                 );
     }
@@ -80,7 +80,7 @@ public class SpecialistServiceImpl implements SpecialistService {
                         .build(id))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(Boolean.class);
+                .bodyToMono(Specialist.class).flatMap(spe->Mono.just(true));
     }
 
     @SneakyThrows
@@ -98,15 +98,14 @@ public class SpecialistServiceImpl implements SpecialistService {
     }
 
     @SneakyThrows
-    private Mono<SpecialistCv> doUpdateSpecialistCv(UUID id, SpecialistFullUpdateDto specialist) {
-        var specialistCVDto = convertSpecialistCVToDTO(specialist);
+    private Mono<SpecialistCv> doUpdateSpecialistCvOnlyPresentation(UUID id, SpecialistFullUpdateDto specialist) {
 
         return resourceServerClientConfiguration.init()
                 .put()
-                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}").build(id))
+                .uri(uriBuilder -> uriBuilder.path("/specialist-cv/{id}/presentation").build(id))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .body(specialistCVDto, SpecialistCvDto.class)
+                .body(Mono.just(specialist), SpecialistFullUpdateDto.class)
                 .retrieve()
                 .bodyToMono(SpecialistCv.class);
 

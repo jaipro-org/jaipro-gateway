@@ -84,8 +84,7 @@ public class SpecialistController {
 
     @ApiResponse(description = "Delete an experience of specialist CV",
             responseCode = "200")
-    @DeleteMapping(value = "/{id}/experience/{professionId}",
-            consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "/{id}/experience/{professionId}")
     public Mono<Void> deleteExperienceByIdAndProfessionId(@PathVariable UUID id, @PathVariable Integer professionId) {
         return resourceServerClientConfiguration.init()
                 .delete()
