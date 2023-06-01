@@ -59,9 +59,9 @@ public class SpecialistServiceImpl implements SpecialistService {
                 .zip(getAllSpecialization(), getAllDistrict(), getAllProfession())
                 .map(tuple -> {
                     var specialistFiltersDto = new SpecialistFiltersDto();
-                    specialistFiltersDto.setCategories(tuple.getT1());
+                    specialistFiltersDto.setSpecialities(tuple.getT1());
                     specialistFiltersDto.setDistricts(tuple.getT2());
-                    specialistFiltersDto.setSpecialties(tuple.getT3());
+                    specialistFiltersDto.setProfessions(tuple.getT3());
 
                     return specialistFiltersDto;
                 })

@@ -12,9 +12,9 @@ import java.util.List;
 @Getter
 public class SpecialistFiltersDto {
 
-    private List<Specialization> categories;
+    private List<Profession> professions;
 
-    private List<Profession> specialties;
+    private List<Specialization> specialities;
 
     private List<District> districts;
 }
