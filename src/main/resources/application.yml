@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: dev
+  codec:
+    max-in-memory-size: 5000KB
 
 server:
   port: 8000
