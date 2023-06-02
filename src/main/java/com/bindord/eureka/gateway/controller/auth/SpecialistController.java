@@ -148,7 +148,7 @@ public class SpecialistController {
                         .queryParam("categories", specialistFiltersSearchDto.getCategories())
                         .queryParam("specialties", specialistFiltersSearchDto.getSpecialties())
                         .queryParam("districts", specialistFiltersSearchDto.getDistricts())
-                        .queryParam("page", specialistFiltersSearchDto.getPage())
+                        .queryParam("pageNumber", specialistFiltersSearchDto.getPageNumber())
                         .queryParam("pageSize", specialistFiltersSearchDto.getPageSize())
                         .build())
                 .accept(MediaType.APPLICATION_JSON)

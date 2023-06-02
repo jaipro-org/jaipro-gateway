@@ -22,15 +22,12 @@
         ],
         "operationId": "findAll",
         "responses": {
-          "200": {
-            "description": "List workLocations",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -42,22 +39,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -68,6 +55,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List workLocations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -90,12 +90,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a workLocation",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/WorkLocation"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -107,22 +107,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -133,6 +123,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a workLocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkLocation"
                 }
               }
             }
@@ -155,12 +155,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a workLocation",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/WorkLocation"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -172,22 +172,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -198,6 +188,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a workLocation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkLocation"
                 }
               }
             }
@@ -212,15 +212,12 @@
         ],
         "operationId": "findAll_1",
         "responses": {
-          "200": {
-            "description": "List userRecovers",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserRecover"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -232,22 +229,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -258,6 +245,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List userRecovers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserRecover"
+                  }
                 }
               }
             }
@@ -280,12 +280,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a userRecover",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserRecover"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -297,22 +297,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -323,6 +313,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
                 }
               }
             }
@@ -345,12 +345,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a userRecover",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserRecover"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -362,22 +362,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -388,6 +378,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a userRecover",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRecover"
                 }
               }
             }
@@ -402,15 +402,12 @@
         ],
         "operationId": "findAll_2",
         "responses": {
-          "200": {
-            "description": "List users info",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserInfo"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -422,22 +419,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -448,6 +435,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List users info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserInfo"
+                  }
                 }
               }
             }
@@ -470,12 +470,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update an user info",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -487,22 +487,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -513,6 +503,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update an user info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -535,12 +535,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist an user info",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -552,22 +552,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -578,6 +568,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist an user info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -592,15 +592,12 @@
         ],
         "operationId": "findAll_3",
         "responses": {
-          "200": {
-            "description": "List specializations",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Specialization"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -612,22 +609,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -638,6 +625,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Specialization"
+                  }
                 }
               }
             }
@@ -660,12 +660,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialization",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialization"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -677,22 +677,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -703,6 +693,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialization"
                 }
               }
             }
@@ -725,12 +725,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialization",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialization"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -742,22 +742,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -768,6 +758,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialization"
                 }
               }
             }
@@ -793,12 +793,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialist"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -810,22 +810,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -836,6 +826,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -869,12 +869,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialist"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -886,22 +886,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -912,6 +902,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -926,15 +926,12 @@
         ],
         "operationId": "findAll_4",
         "responses": {
-          "200": {
-            "description": "List specialistSpecializations",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -946,22 +943,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -972,6 +959,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialistSpecializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -994,12 +994,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialistSpecialization",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistSpecialization"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1011,22 +1011,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1037,6 +1027,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialistSpecialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistSpecialization"
                 }
               }
             }
@@ -1059,12 +1059,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialistSpecialization",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistSpecialization"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1076,22 +1076,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1102,6 +1092,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialistSpecialization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistSpecialization"
                 }
               }
             }
@@ -1137,12 +1137,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist cv but only the fields related to presentation card",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1154,22 +1154,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1180,6 +1170,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist cv but only the fields related to presentation card",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1215,8 +1215,15 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update an experience of specialist cv"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -1225,22 +1232,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1254,6 +1251,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update an experience of specialist cv"
           }
         }
       },
@@ -1284,12 +1284,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist an experience of specialist cv",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Experience"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1301,22 +1301,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1327,6 +1317,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist an experience of specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Experience"
                 }
               }
             }
@@ -1352,12 +1352,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1369,22 +1369,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1395,6 +1385,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1428,12 +1428,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist cv",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1445,22 +1445,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1471,6 +1461,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1510,12 +1510,12 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Update gallery to specialist cv",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1527,22 +1527,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1553,6 +1543,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update gallery to specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -1577,12 +1577,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a specialist bank account",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1594,22 +1594,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1620,6 +1610,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a specialist bank account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -1642,12 +1642,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist bank account",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1659,22 +1659,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1685,6 +1675,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist bank account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -1699,15 +1699,12 @@
         ],
         "operationId": "findAll_8",
         "responses": {
-          "200": {
-            "description": "List professions",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Profession"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1719,22 +1716,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1745,6 +1732,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List professions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Profession"
+                  }
                 }
               }
             }
@@ -1767,12 +1767,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a profession",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profession"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1784,22 +1784,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1810,6 +1800,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a profession",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profession"
                 }
               }
             }
@@ -1832,12 +1832,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a profession",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profession"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1849,22 +1849,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1875,6 +1865,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a profession",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profession"
                 }
               }
             }
@@ -1889,15 +1889,12 @@
         ],
         "operationId": "findAll_9",
         "responses": {
-          "200": {
-            "description": "List mails",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Mail"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1909,22 +1906,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1935,6 +1922,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List mails",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mail"
+                  }
                 }
               }
             }
@@ -1957,12 +1957,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a mail",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mail"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -1974,22 +1974,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2000,6 +1990,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
                 }
               }
             }
@@ -2022,12 +2022,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a mail",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mail"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2039,22 +2039,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2065,6 +2055,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a mail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mail"
                 }
               }
             }
@@ -2079,15 +2079,12 @@
         ],
         "operationId": "findAll_10",
         "responses": {
-          "200": {
-            "description": "List districts",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/District"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2099,22 +2096,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2125,6 +2112,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List districts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/District"
+                  }
                 }
               }
             }
@@ -2147,12 +2147,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a district",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2164,22 +2164,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2190,6 +2180,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a district",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/District"
                 }
               }
             }
@@ -2212,12 +2212,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a district",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2229,22 +2229,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2255,6 +2245,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a district",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/District"
                 }
               }
             }
@@ -2279,8 +2279,15 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer password"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -2289,22 +2296,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2318,6 +2315,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer password"
           }
         }
       }
@@ -2339,8 +2339,15 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer location"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -2349,22 +2356,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2378,6 +2375,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer location"
           }
         }
       }
@@ -2399,12 +2399,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer about",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Customer"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2416,22 +2416,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2442,6 +2432,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer about",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2456,15 +2456,12 @@
         ],
         "operationId": "findAll_11",
         "responses": {
-          "200": {
-            "description": "List customers",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Customer"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2476,22 +2473,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2502,6 +2489,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List customers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Customer"
+                  }
                 }
               }
             }
@@ -2524,12 +2524,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a customer",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Customer"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2541,22 +2541,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2567,6 +2557,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2589,12 +2589,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a customer",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Customer"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2606,22 +2606,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2632,6 +2622,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -2646,15 +2646,12 @@
         ],
         "operationId": "findAll_12",
         "responses": {
-          "200": {
-            "description": "List countrys",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Country"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2666,22 +2663,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2692,6 +2679,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List countrys",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
                 }
               }
             }
@@ -2714,12 +2714,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a country",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2731,22 +2731,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2757,6 +2747,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a country",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
                 }
               }
             }
@@ -2779,12 +2779,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a country",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Country"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2796,22 +2796,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2822,6 +2812,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a country",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
                 }
               }
             }
@@ -2836,15 +2836,12 @@
         ],
         "operationId": "findAll_13",
         "responses": {
-          "200": {
-            "description": "List banks",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Bank"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2856,22 +2853,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2882,6 +2869,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List banks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bank"
+                  }
                 }
               }
             }
@@ -2904,12 +2904,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Update a bank",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bank"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2921,22 +2921,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2947,6 +2937,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Update a bank",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bank"
                 }
               }
             }
@@ -2969,12 +2969,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a bank",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bank"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -2986,22 +2986,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3012,6 +3002,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a bank",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bank"
                 }
               }
             }
@@ -3039,15 +3039,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist many workLocations",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3059,22 +3056,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3085,6 +3072,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist many workLocations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -3112,15 +3112,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist many specialistSpecializations",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3132,22 +3129,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3158,6 +3145,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist many specialistSpecializations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -3172,15 +3172,12 @@
         ],
         "operationId": "findAll_5",
         "responses": {
-          "200": {
-            "description": "List specialist's cvs",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistCv"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3192,22 +3189,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3218,6 +3205,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialist's cvs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistCv"
+                  }
                 }
               }
             }
@@ -3240,12 +3240,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist cv",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistCv"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3257,22 +3257,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3283,6 +3273,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistCv"
                 }
               }
             }
@@ -3297,15 +3297,12 @@
         ],
         "operationId": "findAll_7",
         "responses": {
-          "200": {
-            "description": "List specialists",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Specialist"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3317,22 +3314,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3343,6 +3330,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "List specialists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Specialist"
+                  }
                 }
               }
             }
@@ -3365,12 +3365,12 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Persist a specialist",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Specialist"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3382,22 +3382,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3408,6 +3398,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Persist a specialist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Specialist"
                 }
               }
             }
@@ -3432,8 +3432,15 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "Send email to init recover password process"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -3442,22 +3449,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3471,6 +3468,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Send email to init recover password process"
           }
         }
       }
@@ -3504,12 +3504,12 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomDto"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3521,22 +3521,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3547,6 +3537,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomDto"
                 }
               }
             }
@@ -3571,12 +3571,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3588,22 +3588,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3614,6 +3604,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
                 }
               }
             }
@@ -3654,8 +3654,15 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Update a customer photo"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -3664,22 +3671,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3693,6 +3690,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Update a customer photo"
           }
         }
       }
@@ -3715,15 +3715,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "FindAll by SpecialistId",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WorkLocation"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3735,22 +3732,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3761,6 +3748,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "FindAll by SpecialistId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WorkLocation"
+                  }
                 }
               }
             }
@@ -3795,8 +3795,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Validate limit date of ticket to recover password"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -3805,22 +3812,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3834,6 +3831,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Validate limit date of ticket to recover password"
           }
         }
       }
@@ -3856,12 +3856,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3873,22 +3873,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3899,6 +3889,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -3923,12 +3923,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by email",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserInfo"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3940,22 +3940,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -3966,6 +3956,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
                 }
               }
             }
@@ -3980,15 +3980,12 @@
         ],
         "operationId": "letsDoThis",
         "responses": {
-          "200": {
-            "description": "OK",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "text/plain": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4000,22 +3997,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4026,6 +4013,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -4050,15 +4050,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by filters",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistResultSearchDTO"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4070,22 +4067,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4096,6 +4083,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by filters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistResultSearchDTO"
+                  }
                 }
               }
             }
@@ -4120,12 +4120,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Verify if specialist exists",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "boolean"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4137,22 +4137,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4163,6 +4153,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Verify if specialist exists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
                 }
               }
             }
@@ -4188,15 +4188,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "FindAll by SpecialistId",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistSpecialization"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4208,22 +4205,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4234,6 +4221,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "FindAll by SpecialistId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistSpecialization"
+                  }
                 }
               }
             }
@@ -4259,12 +4259,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find One by id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/SpecialistBankAccount"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4276,22 +4276,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4302,6 +4292,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find One by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecialistBankAccount"
                 }
               }
             }
@@ -4325,8 +4325,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Delete banks account"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -4335,22 +4342,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4364,6 +4361,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Delete banks account"
           }
         }
       }
@@ -4386,15 +4386,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find All by specialist Id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistBankAccount"
-                  }
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4406,22 +4403,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4432,6 +4419,19 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find All by specialist Id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecialistBankAccount"
+                  }
                 }
               }
             }
@@ -4457,12 +4457,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Get customer information",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomerInformationDto"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4474,22 +4474,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4500,6 +4490,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Get customer information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerInformationDto"
                 }
               }
             }
@@ -4525,12 +4525,12 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Find by id",
+          "404": {
+            "description": "Not Found",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/Customer"
+                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4542,22 +4542,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4568,6 +4558,16 @@
               "*/*": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Find by id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
                 }
               }
             }
@@ -4602,8 +4602,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "delete work location by id"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -4612,22 +4619,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4641,6 +4638,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "delete work location by id"
           }
         }
       }
@@ -4672,8 +4672,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Delete specialist specializations by specialistId"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -4682,22 +4689,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4711,6 +4708,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Delete specialist specializations by specialistId"
           }
         }
       }
@@ -4733,8 +4733,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Delete specialist specializations by specialistId"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -4743,22 +4750,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4772,6 +4769,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Delete specialist specializations by specialistId"
           }
         }
       }
@@ -4803,8 +4803,15 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Delete an experience of specialist cv"
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -4813,22 +4820,12 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
                 }
               }
             }
@@ -4842,6 +4839,9 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Delete an experience of specialist cv"
           }
         }
       }
@@ -4849,17 +4849,6 @@
   },
   "components": {
     "schemas": {
-      "ErrorResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "code": {
-            "type": "string"
-          }
-        }
-      },
       "ApiError": {
         "type": "object",
         "properties": {
@@ -4893,6 +4882,17 @@
             "type": "object"
           },
           "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
             "type": "string"
           }
         }
@@ -6563,6 +6563,28 @@
       "SpecialistFiltersSearchDto": {
         "type": "object",
         "properties": {
+          "sortColumn": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sortDirection": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string"
+          },
+          "pageSize": {
+            "maximum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
           "categories": {
             "type": "array",
             "items": {
@@ -6583,14 +6605,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          "page": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32"
           }
         }
       },
