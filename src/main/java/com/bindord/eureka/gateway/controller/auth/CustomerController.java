@@ -93,7 +93,7 @@ public class CustomerController {
             responseCode = "200")
     @PostMapping(value = "/updatePhoto",
             consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public Mono<Void> updatePhoto(@RequestPart("file") FilePart file, @RequestPart("id") String id, @RequestPart("extension") String extension){
+    public Mono<Void> updatePhoto(@RequestPart(name = "file", required = false) FilePart file, @RequestPart("id") String id, @RequestPart("extension") String extension){
         MultipartBodyBuilder builder = new MultipartBodyBuilder();
         builder.part("file", file);
         builder.part("id", id);
