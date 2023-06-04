@@ -68,6 +68,23 @@ public class SpecialistSpecializationController {
                 .bodyToFlux(SpecialistSpecialization.class);
     }
 
+    @ApiResponse(description = "Delete some specialistSpecializations associated to a specific profession",
+            responseCode = "200")
+    @PostMapping(value = "/delete/list",
+            consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public Flux<SpecialistSpecialization> deleteManySpecialistSpecialization(@RequestBody List<@Valid SpecialistSpecializationDto> specialistSpecializations) {
+        return resourceServerClientConfiguration.init()
+                .post()
+                .uri("/specialist-specialization/delete/list")
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Flux.fromIterable(
+                        specialistSpecializations
+                ), new ParameterizedTypeReference<>() {
+                })
+                .retrieve()
+                .bodyToFlux(SpecialistSpecialization.class);
+    }
+
     @ApiResponse(description = "Update Specialist's specialization",
             responseCode = "200")
     @PutMapping(value = "",
