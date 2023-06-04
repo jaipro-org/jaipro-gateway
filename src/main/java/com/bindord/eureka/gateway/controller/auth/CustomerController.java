@@ -95,7 +95,9 @@ public class CustomerController {
             consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public Mono<Void> updatePhoto(@RequestPart(name = "file", required = false) FilePart file, @RequestPart("id") String id, @RequestPart("extension") String extension){
         MultipartBodyBuilder builder = new MultipartBodyBuilder();
-        builder.part("file", file);
+        if(file != null)
+            builder.part("file", file);
+
         builder.part("id", id);
         builder.part("extension", extension);
 
