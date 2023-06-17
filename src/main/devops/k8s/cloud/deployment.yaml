@@ -24,18 +24,11 @@ spec:
       serviceAccountName: jaipro-sa
       containers:
         - name: jaipro-gateway
-          image: gcr.io/pure-anthem-382602/jaipro-gateway
+          image: gcr.io/verdant-cascade-390018/jaipro-gateway
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
               name: netty-port
-          resources:
-            requests:
-              cpu: 200m
-              memory: 200Mi
-            limits:
-              memory: 600Mi
-              cpu: 300m
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
