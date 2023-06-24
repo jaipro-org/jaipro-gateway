@@ -87,6 +87,7 @@ public class ExceptionControllerAdvice {
             return Mono.just(ResponseEntity.status(ex.getStatusCode())
                     .body(new ApiError(ex)));
         }
+        log.error(ex.getMessage());
         return Mono.just(ResponseEntity.status(ex.getStatusCode()).body(apiErr));
     }
 
@@ -95,6 +96,7 @@ public class ExceptionControllerAdvice {
     public @ResponseBody
     Mono<ApiError> handleServerWebInputException(ServerWebInputException ex) {
         log.warn("method {}", "handleServerWebInputException");
+        log.error(ex.getMessage());
         return Mono.just(new ApiError(ex.getMessage(), ex));
     }
 }

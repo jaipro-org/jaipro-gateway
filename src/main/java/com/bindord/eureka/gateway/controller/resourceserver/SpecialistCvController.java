@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.http.codec.multipart.FilePart;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -19,6 +21,7 @@ import reactor.core.scheduler.Schedulers;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.UUID;
 
 @AllArgsConstructor
 @RestController
@@ -38,7 +41,7 @@ public class SpecialistCvController {
                                             @RequestPart @Valid SpecialistGalleryUpdateDto specialistGallery) {
         MultipartBodyBuilder multipartBuilder = new MultipartBodyBuilder();
         images.forEach(
-                ele-> multipartBuilder.part("images", ele)
+                ele -> multipartBuilder.part("images", ele)
         );
 
         multipartBuilder.part("specialistGallery", specialistGallery);
@@ -50,6 +53,24 @@ public class SpecialistCvController {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(SpecialistCv.class)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @ApiResponse(description = "Delete image from gallery of specialist cv",
+            responseCode = "200")
+    @DeleteMapping(value = "/gallery/{specialistId}/{imageName}",
+            produces = {MediaType.APPLICATION_JSON_VALUE}
+    )
+    public Mono<Void> deleteImageFromGallery(@PathVariable UUID specialistId, @PathVariable String imageName) {
+
+        return resourceServerClientConfiguration.init()
+                .delete()
+                .uri(uriBuilder -> uriBuilder
+                        .path("/specialist-cv/gallery/{specialistId}/{imageName}")
+                        .build(specialistId, imageName))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(Void.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
