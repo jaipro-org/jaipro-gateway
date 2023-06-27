@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: gcp-dev
+    active: dev
   codec:
     max-in-memory-size: 5000KB
 
