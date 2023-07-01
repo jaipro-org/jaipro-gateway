@@ -7,6 +7,7 @@ import com.bindord.eureka.gateway.domain.specialist.SpecialistFullUpdateDto;
 import com.bindord.eureka.gateway.services.SpecialistService;
 import com.bindord.eureka.gateway.wsc.AuthClientConfiguration;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
+import com.bindord.eureka.resourceserver.model.BasePaginateResponseSpecialistResultSearchDTO;
 import com.bindord.eureka.resourceserver.model.Experience;
 import com.bindord.eureka.resourceserver.model.Specialist;
 import com.bindord.eureka.resourceserver.model.SpecialistExperienceUpdateDto;
@@ -141,7 +142,7 @@ public class SpecialistController {
             responseCode = "200")
     @GetMapping(value = "/search",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Flux<SpecialistResultSearchDTO> searchSpecialist(@Valid SpecialistFiltersSearchDto specialistFiltersSearchDto) {
+    public Mono<BasePaginateResponseSpecialistResultSearchDTO> searchSpecialist(@Valid SpecialistFiltersSearchDto specialistFiltersSearchDto) {
         return resourceServerClientConfiguration.init()
                 .get()
                 .uri(uriBuilder -> uriBuilder.path("/specialist/search")
@@ -153,7 +154,7 @@ public class SpecialistController {
                         .build())
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToFlux(SpecialistResultSearchDTO.class)
+                .bodyToMono(BasePaginateResponseSpecialistResultSearchDTO.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 }
