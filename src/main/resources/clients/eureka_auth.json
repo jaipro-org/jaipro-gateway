@@ -59,10 +59,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
                 }
@@ -75,6 +75,73 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Specialist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/authentication/v1/auth/refresh-token": {
+      "post": {
+        "tags": [
+          "authentication-controller"
+        ],
+        "operationId": "refreshToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshToken"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Refresh access token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToken"
                 }
               }
             }
@@ -126,10 +193,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
                 }
@@ -138,73 +205,6 @@
           },
           "200": {
             "description": "Update customer password"
-          }
-        }
-      }
-    },
-    "/eureka/authentication/v1/auth/refresh-token": {
-      "post": {
-        "tags": [
-          "authentication-controller"
-        ],
-        "operationId": "refreshToken",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RefreshToken"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ApiError"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ErrorResponse"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "Refresh access token",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserToken"
-                }
-              }
-            }
           }
         }
       }
@@ -253,10 +253,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
                 }
@@ -269,6 +269,66 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AuthUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/authentication/v1/this-is-why-we-play": {
+      "get": {
+        "tags": [
+          "this-is-why-we-play-controller"
+        ],
+        "operationId": "letsDoThis",
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -320,10 +380,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     },
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     }
                   ]
                 }
@@ -336,66 +396,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Customer"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/eureka/authentication/v1/this-is-why-we-play": {
-      "get": {
-        "tags": [
-          "this-is-why-we-play-controller"
-        ],
-        "operationId": "letsDoThis",
-        "responses": {
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiError"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "*/*": {
-                "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ApiError"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ErrorResponse"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -578,7 +578,6 @@
           "name",
           "password",
           "phone",
-          "publicUrl",
           "specialistSpecializations",
           "workLocations"
         ],
@@ -633,18 +632,6 @@
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
-          },
-          "publicUrl": {
-            "maxLength": 127,
-            "minLength": 7,
-            "type": "string"
-          },
-          "verified": {
-            "type": "boolean"
-          },
-          "districtId": {
-            "type": "integer",
-            "format": "int32"
           },
           "password": {
             "maxLength": 50,
@@ -806,37 +793,6 @@
           }
         }
       },
-      "UserPasswordDTO": {
-        "required": [
-          "currentPassword",
-          "nwPassword",
-          "username"
-        ],
-        "type": "object",
-        "properties": {
-          "currentPassword": {
-            "maxLength": 40,
-            "minLength": 7,
-            "type": "string"
-          },
-          "nwPassword": {
-            "maxLength": 40,
-            "minLength": 7,
-            "type": "string"
-          },
-          "userId": {
-            "type": "string"
-          },
-          "username": {
-            "maxLength": 60,
-            "minLength": 7,
-            "type": "string"
-          },
-          "verificationCode": {
-            "type": "string"
-          }
-        }
-      },
       "RefreshToken": {
         "required": [
           "refreshToken"
@@ -896,6 +852,37 @@
             "type": "string"
           },
           "errorUri": {
+            "type": "string"
+          }
+        }
+      },
+      "UserPasswordDTO": {
+        "required": [
+          "currentPassword",
+          "nwPassword",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "maxLength": 40,
+            "minLength": 7,
+            "type": "string"
+          },
+          "nwPassword": {
+            "maxLength": 40,
+            "minLength": 7,
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "username": {
+            "maxLength": 60,
+            "minLength": 7,
+            "type": "string"
+          },
+          "verificationCode": {
             "type": "string"
           }
         }
@@ -981,9 +968,7 @@
           "email",
           "lastName",
           "name",
-          "password",
-          "phone",
-          "publicUrl"
+          "password"
         ],
         "type": "object",
         "properties": {
