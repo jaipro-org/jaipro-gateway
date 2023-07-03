@@ -1,6 +1,9 @@
 package com.bindord.eureka.gateway.controller.resourceserver;
 
+import com.bindord.eureka.gateway.domain.specialist.SpecialistBiographyDto;
 import com.bindord.eureka.gateway.domain.specialist.SpecialistGalleryUpdateDto;
+import com.bindord.eureka.gateway.services.SpecialistCvService;
+import com.bindord.eureka.gateway.services.SpecialistService;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.SpecialistCv;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -10,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.http.codec.multipart.FilePart;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +33,7 @@ import java.util.UUID;
 @Slf4j
 public class SpecialistCvController {
 
+    private final SpecialistCvService specialistCvService;
     private final ResourceServerClientConfiguration resourceServerClientConfiguration;
 
     @ApiResponse(description = "Update gallery of the specialist",
@@ -74,4 +79,9 @@ public class SpecialistCvController {
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
+    @ApiResponse(description = "Get specialist biography by id", responseCode = "200")
+    @GetMapping(value = "/biography/{specialistId}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<SpecialistBiographyDto> findSpecialistBiographyById(@PathVariable UUID specialistId) {
+        return specialistCvService.getBiography(specialistId);
+    }
 }
