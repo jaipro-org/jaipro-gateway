@@ -9,10 +9,11 @@ import com.bindord.eureka.gateway.wsc.AuthClientConfiguration;
 import com.bindord.eureka.gateway.wsc.ResourceServerClientConfiguration;
 import com.bindord.eureka.resourceserver.model.BasePaginateResponseSpecialistResultSearchDTO;
 import com.bindord.eureka.resourceserver.model.Experience;
+import com.bindord.eureka.resourceserver.model.Rating;
 import com.bindord.eureka.resourceserver.model.Specialist;
 import com.bindord.eureka.resourceserver.model.SpecialistExperienceUpdateDto;
 import com.bindord.eureka.resourceserver.model.SpecialistFiltersSearchDto;
-import com.bindord.eureka.resourceserver.model.SpecialistResultSearchDTO;
+import com.bindord.eureka.resourceserver.model.SpecialistPublicInformationDto;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -155,6 +156,30 @@ public class SpecialistController {
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(BasePaginateResponseSpecialistResultSearchDTO.class)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @ApiResponse(description = "Get specialist public info by id", responseCode = "200")
+    @GetMapping(value = "/public-information/{specialistId}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Mono<SpecialistPublicInformationDto> getSpecialistPublicInformation(@PathVariable UUID specialistId) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri(uriBuilder -> uriBuilder.path("/specialist/public-information/{id}").build(specialistId))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(SpecialistPublicInformationDto.class)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @ApiResponse(description = "Get all reviews to specialist by id", responseCode = "200")
+    @GetMapping(value = "/reviews/{specialistId}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Flux<Rating> getReviews(@PathVariable UUID specialistId) {
+        return resourceServerClientConfiguration.init()
+                .get()
+                .uri(uriBuilder -> uriBuilder.path("/specialist/ratings/{id}").build(specialistId))
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(Rating.class)
                 .subscribeOn(Schedulers.boundedElastic());
     }
 }
