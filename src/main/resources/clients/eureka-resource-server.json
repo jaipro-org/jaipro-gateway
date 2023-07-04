@@ -42,10 +42,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -107,10 +107,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -172,10 +172,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -232,10 +232,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -297,10 +297,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -362,10 +362,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -422,10 +422,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -487,10 +487,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -552,10 +552,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -612,10 +612,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -677,10 +677,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -742,10 +742,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -810,10 +810,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -886,10 +886,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -946,10 +946,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1011,10 +1011,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1076,10 +1076,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1154,10 +1154,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1225,10 +1225,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1301,10 +1301,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1369,10 +1369,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1445,10 +1445,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1527,10 +1527,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1594,10 +1594,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1659,10 +1659,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1719,10 +1719,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1784,10 +1784,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1849,10 +1849,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1909,10 +1909,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -1974,10 +1974,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2039,10 +2039,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2099,10 +2099,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2164,10 +2164,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2229,10 +2229,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2289,10 +2289,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2354,10 +2354,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2419,10 +2419,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2479,10 +2479,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2539,10 +2539,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2606,10 +2606,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2666,10 +2666,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2731,10 +2731,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2796,10 +2796,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2856,10 +2856,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2921,10 +2921,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -2986,10 +2986,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3046,10 +3046,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3111,10 +3111,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3176,10 +3176,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3249,10 +3249,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3322,10 +3322,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3385,10 +3385,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3445,10 +3445,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3510,10 +3510,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3570,10 +3570,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3635,10 +3635,85 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/service-request": {
+      "post": {
+        "tags": [
+          "service-request-controller"
+        ],
+        "operationId": "create",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "images",
+                  "serviceRequest"
+                ],
+                "type": "object",
+                "properties": {
+                  "images": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "serviceRequest": {
+                    "$ref": "#/components/schemas/ServiceRequestCreateDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "create service request"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
                       "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3695,10 +3770,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3774,10 +3849,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3841,10 +3916,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3916,10 +3991,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -3987,10 +4062,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4057,10 +4132,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4125,10 +4200,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4192,10 +4267,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4252,10 +4327,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4307,10 +4382,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SpecialistResultSearchDTO"
-                  }
+                  "$ref": "#/components/schemas/BasePaginateResponseSpecialistResultSearchDTO"
                 }
               }
             }
@@ -4322,10 +4394,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4355,7 +4427,78 @@
         }
       }
     },
-    "/eureka/resource-server/v1/specialist/public-informtion/{id}": {
+    "/eureka/resource-server/v1/specialist/ratings/{id}": {
+      "get": {
+        "tags": [
+          "specialist-controller"
+        ],
+        "operationId": "getRatings",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "create service request by specialist id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rating"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/specialist/public-information/{id}": {
       "get": {
         "tags": [
           "specialist-controller"
@@ -4390,10 +4533,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4457,10 +4600,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4528,10 +4671,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4599,10 +4742,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4670,10 +4813,78 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/specialist-cv/about/{specialistId}": {
+      "get": {
+        "tags": [
+          "specialist-cv-controller"
+        ],
+        "operationId": "getAbout",
+        "parameters": [
+          {
+            "name": "specialistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get about of specialist cv",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
                       "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4738,10 +4949,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4797,10 +5008,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4868,10 +5079,86 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
+                      "$ref": "#/components/schemas/ErrorResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/eureka/resource-server/v1/service-request/list/{customerId}": {
+      "get": {
+        "tags": [
+          "service-request-controller"
+        ],
+        "operationId": "listAll",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "searchDto",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/BaseSearch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "list all service request by customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasePaginateResponseServiceRequestListDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
                       "$ref": "#/components/schemas/ApiError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -4948,10 +5235,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5016,10 +5303,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5084,10 +5371,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5154,10 +5441,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5224,10 +5511,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5285,10 +5572,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5355,10 +5642,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5424,10 +5711,10 @@
                 "schema": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/ErrorResponse"
+                      "$ref": "#/components/schemas/ApiError"
                     },
                     {
-                      "$ref": "#/components/schemas/ApiError"
+                      "$ref": "#/components/schemas/ErrorResponse"
                     }
                   ]
                 }
@@ -5460,6 +5747,17 @@
   },
   "components": {
     "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        }
+      },
       "ApiError": {
         "type": "object",
         "properties": {
@@ -5493,17 +5791,6 @@
             "type": "object"
           },
           "message": {
-            "type": "string"
-          }
-        }
-      },
-      "ErrorResponse": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "code": {
             "type": "string"
           }
         }
@@ -6553,9 +6840,7 @@
         "required": [
           "email",
           "lastName",
-          "name",
-          "phone",
-          "publicUrl"
+          "name"
         ],
         "type": "object",
         "properties": {
@@ -6938,8 +7223,7 @@
           "email",
           "lastName",
           "name",
-          "phone",
-          "publicUrl"
+          "phone"
         ],
         "type": "object",
         "properties": {
@@ -6992,19 +7276,26 @@
             "maxLength": 15,
             "minLength": 9,
             "type": "string"
-          },
-          "publicUrl": {
-            "maxLength": 127,
-            "minLength": 7,
-            "type": "string"
-          },
-          "verified": {
-            "type": "boolean"
+          }
+        }
+      },
+      "ServiceRequestCreateDto": {
+        "type": "object",
+        "properties": {
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
           },
           "districtId": {
             "type": "integer",
-            "format": "int32",
-            "example": 1
+            "format": "int32"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string",
+            "format": "uuid"
           }
         }
       },
@@ -7184,9 +7475,7 @@
         "required": [
           "email",
           "lastName",
-          "name",
-          "phone",
-          "publicUrl"
+          "name"
         ],
         "type": "object",
         "properties": {
@@ -7353,6 +7642,21 @@
           }
         }
       },
+      "BasePaginateResponseSpecialistResultSearchDTO": {
+        "type": "object",
+        "properties": {
+          "totalRows": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SpecialistResultSearchDTO"
+            }
+          }
+        }
+      },
       "SpecialistResultSearchDTO": {
         "type": "object",
         "properties": {
@@ -7374,6 +7678,40 @@
           },
           "professions": {
             "type": "string"
+          }
+        }
+      },
+      "Rating": {
+        "required": [
+          "calification",
+          "clientName",
+          "serviceId"
+        ],
+        "type": "object",
+        "properties": {
+          "calification": {
+            "minimum": 1,
+            "type": "number",
+            "format": "float"
+          },
+          "comment": {
+            "maxLength": 250,
+            "minLength": 9,
+            "type": "string"
+          },
+          "clientName": {
+            "maxLength": 72,
+            "minLength": 9,
+            "type": "string"
+          },
+          "serviceId": {
+            "maxLength": 2147483647,
+            "minLength": 36,
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -7406,6 +7744,81 @@
           },
           "specialties": {
             "type": "string"
+          }
+        }
+      },
+      "BaseSearch": {
+        "type": "object",
+        "properties": {
+          "sortColumn": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sortDirection": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "maximum": 100,
+            "type": "integer",
+            "format": "int32"
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "BasePaginateResponseServiceRequestListDto": {
+        "type": "object",
+        "properties": {
+          "totalRows": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceRequestListDto"
+            }
+          }
+        }
+      },
+      "ServiceRequestListDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "professionName": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "proposalsCounter": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rating": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enabledRating": {
+            "type": "boolean"
+          },
+          "ratingDone": {
+            "type": "boolean"
           }
         }
       },
