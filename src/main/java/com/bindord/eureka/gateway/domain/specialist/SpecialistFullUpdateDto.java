@@ -28,15 +28,12 @@ public class SpecialistFullUpdateDto {
 
     private String about;
 
-    @NotBlank
     @Size(min = 2, max = Byte.MAX_VALUE)
     private String address;
 
-    @NotBlank
     @Size(min = 9, max = 15)
     private String phone;
 
-    @NotBlank
     @Size(min = 9, max = 15)
     private String secondaryPhone;
 }
