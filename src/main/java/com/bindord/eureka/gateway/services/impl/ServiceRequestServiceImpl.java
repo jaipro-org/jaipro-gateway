@@ -2,6 +2,7 @@ package com.bindord.eureka.gateway.services.impl;
 
 import com.bindord.eureka.auth.model.Customer;
 import com.bindord.eureka.auth.model.CustomerPersist;
+import com.bindord.eureka.gateway.domain.service.ServiceRequestCreateDto;
 import com.bindord.eureka.gateway.domain.service.ServiceRequestDto;
 import com.bindord.eureka.gateway.services.ServiceRequestService;
 import com.bindord.eureka.gateway.wsc.AuthClientConfiguration;
